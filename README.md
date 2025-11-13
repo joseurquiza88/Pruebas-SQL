@@ -1,0 +1,21 @@
+# 📊 SQL Queries
+
+Este proyecto **busca explorar y aprender SQL**,  mediante la ejecución de consultas sobre DataFrames en Python, empleando la librería `pandasql`.  
+
+
+---
+
+## 🛠 Tecnologías usadas
+
+- **Python 3.x**  
+- **pandas** – Para manejar DataFrames  
+- **pandasql** – Para ejecutar queries SQL sobre DataFrames
+
+---
+
+## 🔹 Funcionalidades
+
+1. **Cargar datasets** en DataFrames (`pandas`)  
+2. **Realizar consultas SQL** tipo `SELECT`, `WHERE`, `GROUP BY`, etc.  
+3. **Explorar resultados** y manipularlos con pandas  
+4. **Comparar distintos enfoques** de filtrado y agregación de datos
