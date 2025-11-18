@@ -1,0 +1,378 @@
+1,5,43,22,22,Rosario Central,Argentinos Juniors,1,0,Gigante de Arroyito,27 de enero,19:15,Fecha 1
+2,5,44,10,14,Defensa y Justicia,Huracán,2,1,Norberto Tomaghello,28 de enero,21:30,Fecha 1
+3,5,45,23,2,San Lorenzo,Arsenal,1,0,Nuevo Gasómetro,28 de enero,17:00,Fecha 1
+4,5,46,11,26,Estudiantes (LP),Tigre,1,2,Jorge Luis Hirschi,29 de enero,19:15,Fecha 1
+5,5,47,25,15,Talleres (C),Independiente,0,1,Mario Alberto Kempes,30 de enero,19:15,Fecha 1
+6,5,48,8,21,Central Córdoba (SdE),River Plate,0,2,Único Madre de Ciudades,31 de enero,21:30,Fecha 1
+7,5,49,19,18,Platense,Newell's Old Boys,2,2,Ciudad de Vicente López,29 de enero,17:00,Fecha 1
+8,5,50,20,6,Racing Club,Belgrano,0,0,El Cilindro,30 de enero,19:15,Fecha 1
+9,5,51,9,17,Colón,Lanús,1,2,Brigadier Estanislao López,30 de enero,19:15,Fecha 1
+10,5,52,16,24,Instituto,Sarmiento (J),0,0,Juan Domingo Perón,30 de enero,19:15,Fecha 1
+11,5,53,7,3,Boca Juniors,Atlético Tucumán,1,0,La Bombonera,30 de enero,21:30,Fecha 1
+12,5,54,5,13,Barracas Central,Godoy Cruz,0,1,Claudio Chiqui Tapia,30 de enero,17:00,Fecha 1
+13,5,55,4,27,Banfield,Unión,0,0,Florencio Sola,30 de enero,20:00,Fecha 1
+14,5,56,28,12,Vélez Sarsfield,Gimnasia y Esgrima (LP),3,1,José Amalfitani,30 de enero,20:00,Fecha 1
+15,5,57,18,28,Newell's Old Boys,Vélez Sarsfield,1,0,Marcelo Bielsa,3 de febrero,20:00,Fecha 2
+16,5,58,26,22,Tigre,Rosario Central,2,2,Monumental de Victoria,3 de febrero,20:00,Fecha 2
+17,5,59,2,11,Arsenal,Estudiantes (LP),1,2,El Viaducto,4 de febrero,17:00,Fecha 2
+18,5,60,24,5,Sarmiento (J),Barracas Central,3,5,Eva Perón,4 de febrero,17:00,Fecha 2
+19,5,61,6,21,Belgrano,River Plate,2,1,Mario Alberto Kempes,4 de febrero,19:15,Fecha 2
+20,5,62,17,23,Lanús,San Lorenzo,2,1,Ciudad de Lanús,4 de febrero,21:30,Fecha 2
+21,5,63,1,20,Argentinos Juniors,Racing Club,1,0,Diego Armando Maradona,4 de febrero,21:30,Fecha 2
+22,5,64,15,19,Independiente,Platense,1,2,Libertadores de América,5 de febrero,17:00,Fecha 2
+23,5,65,7,8,Boca Juniors,Central Córdoba (SdE),0,0,La Bombonera,5 de febrero,19:15,Fecha 2
+24,5,66,3,25,Atlético Tucumán,Talleres (C),0,2,Monumental José Fierro,5 de febrero,21:30,Fecha 2
+25,5,67,27,16,Unión,Instituto,0,2,15 de Abril,5 de febrero,21:30,Fecha 2
+26,5,43,13,9,Godoy Cruz,Colón,1,0,Malvinas Argentinas,5 de febrero,21:30,Fecha 2
+27,5,44,12,10,Gimnasia y Esgrima (LP),Defensa y Justicia,0,2,Del Bosque,6 de febrero,18:00,Fecha 2
+28,5,45,14,4,Huracán,Banfield,3,2,Tomás Adolfo Ducó,6 de febrero,21:30,Fecha 2
+29,5,46,9,24,Colón,Sarmiento (J),0,2,Brigadier Estanislao López,10 de febrero,21:30,Fecha 3
+30,5,47,8,6,Central Córdoba (SdE),Belgrano,0,1,Único Madre de Ciudades,10 de febrero,21:30,Fecha 3
+31,5,48,10,18,Defensa y Justicia,Newell's Old Boys,1,0,Norberto Tomaghello,11 de febrero,17:00,Fecha 3
+32,5,49,23,13,San Lorenzo,Godoy Cruz,1,0,Nuevo Gasómetro,11 de febrero,17:00,Fecha 3
+33,5,50,19,3,Platense,Atlético Tucumán,1,1,Ciudad de Vicente López,11 de febrero,19:15,Fecha 3
+34,5,51,25,7,Talleres (C),Boca Juniors,2,1,Mario Alberto Kempes,11 de febrero,21:30,Fecha 3
+35,5,52,28,15,Vélez Sarsfield,Independiente,0,0,José Amalfitani,11 de febrero,21:30,Fecha 3
+36,5,53,4,12,Banfield,Gimnasia y Esgrima (LP),0,0,Florencio Sola,12 de febrero,17:00,Fecha 3
+37,5,54,22,2,Rosario Central,Arsenal,2,1,Gigante de Arroyito,12 de febrero,17:00,Fecha 3
+38,5,55,21,1,River Plate,Argentinos Juniors,2,1,Monumental,12 de febrero,19:15,Fecha 3
+39,5,56,16,14,Instituto,Huracán,0,0,Juan Domingo Perón,12 de febrero,21:30,Fecha 3
+40,5,57,20,26,Racing Club,Tigre,2,2,El Cilindro,12 de febrero,21:30,Fecha 3
+41,5,58,5,27,Barracas Central,Unión,1,1,Claudio Chiqui Tapia,13 de febrero,17:00,Fecha 3
+42,5,59,11,17,Estudiantes (LP),Lanús,0,2,Jorge Luis Hirschi,13 de febrero,20:00,Fecha 3
+43,5,60,12,16,Gimnasia y Esgrima (LP),Instituto,2,0,Del Bosque,17 de febrero,18:00,Fecha 4
+44,5,61,2,20,Arsenal,Racing Club,0,3,El Viaducto,17 de febrero,21:30,Fecha 4
+45,5,62,14,5,Huracán,Barracas Central,2,0,Tomás Adolfo Ducó,17 de febrero,21:30,Fecha 4
+46,5,63,17,22,Lanús,Rosario Central,3,0,Ciudad de Lanús,18 de febrero,17:00,Fecha 4
+47,5,64,26,21,Tigre,River Plate,0,1,Monumental de Victoria,18 de febrero,18:00,Fecha 4
+48,5,65,1,6,Argentinos Juniors,Belgrano,3,0,Diego Armando Maradona,18 de febrero,19:15,Fecha 4
+49,5,66,13,11,Godoy Cruz,Estudiantes (LP),0,1,Malvinas Argentinas,18 de febrero,19:15,Fecha 4
+50,5,67,18,4,Newell's Old Boys,Banfield,2,0,Marcelo Bielsa,18 de febrero,21:00,Fecha 4
+51,5,43,27,9,Unión,Colón,1,1,15 de Abril,19 de febrero,17:00,Fecha 4
+52,5,44,7,19,Boca Juniors,Platense,3,1,La Bombonera,19 de febrero,19:15,Fecha 4
+53,5,45,15,10,Independiente,Defensa y Justicia,0,2,Libertadores de América,19 de febrero,21:30,Fecha 4
+54,5,46,25,8,Talleres (C),Central Córdoba (SdE),2,0,Mario Alberto Kempes,19 de febrero,21:30,Fecha 4
+55,5,47,24,23,Sarmiento (J),San Lorenzo,0,1,Eva Perón,20 de febrero,19:15,Fecha 4
+56,5,48,3,28,Atlético Tucumán,Vélez Sarsfield,1,1,Monumental José Fierro,20 de febrero,21:30,Fecha 4
+57,5,49,6,26,Belgrano,Tigre,0,2,Mario Alberto Kempes,24 de febrero,21:00,Fecha 5
+58,5,50,22,13,Rosario Central,Godoy Cruz,1,0,Gigante de Arroyito,24 de febrero,21:00,Fecha 5
+59,5,51,23,27,San Lorenzo,Unión,1,0,Nuevo Gasómetro,25 de febrero,17:00,Fecha 5
+60,5,52,11,24,Estudiantes (LP),Sarmiento (J),1,1,Jorge Luis Hirschi,25 de febrero,19:15,Fecha 5
+61,5,53,19,25,Platense,Talleres (C),2,4,Ciudad de Vicente López,25 de febrero,19:15,Fecha 5
+62,5,54,28,7,Vélez Sarsfield,Boca Juniors,1,2,José Amalfitani,25 de febrero,21:30,Fecha 5
+63,5,55,9,14,Colón,Huracán,1,1,Brigadier Estanislao López,26 de febrero,17:00,Fecha 5
+64,5,56,10,3,Defensa y Justicia,Atlético Tucumán,3,0,Norberto Tomaghello,26 de febrero,17:00,Fecha 5
+65,5,57,21,2,River Plate,Arsenal,1,2,Monumental,26 de febrero,19:15,Fecha 5
+66,5,58,4,15,Banfield,Independiente,0,0,Florencio Sola,26 de febrero,21:30,Fecha 5
+67,5,59,16,18,Instituto,Newell's Old Boys,3,1,Juan Domingo Perón,26 de febrero,21:30,Fecha 5
+68,5,60,5,12,Barracas Central,Gimnasia y Esgrima (LP),1,0,Claudio Chiqui Tapia,27 de febrero,17:00,Fecha 5
+69,5,61,20,17,Racing Club,Lanús,2,1,El Cilindro,27 de febrero,19:15,Fecha 5
+70,5,62,8,1,Central Córdoba (SdE),Argentinos Juniors,1,0,Único Madre de Ciudades,27 de febrero,21:30,Fecha 5
+71,5,63,24,22,Sarmiento (J),Rosario Central,4,1,Eva Perón,3 de marzo,20:00,Fecha 6
+72,5,64,27,11,Unión,Estudiantes (LP),2,0,15 de Abril,3 de marzo,20:00,Fecha 6
+73,5,65,12,9,Gimnasia y Esgrima (LP),Colón,0,0,Del Bosque,4 de marzo,17:00,Fecha 6
+74,5,66,19,8,Platense,Central Córdoba (SdE),1,1,Ciudad de Vicente López,4 de marzo,17:00,Fecha 6
+75,5,67,17,21,Lanús,River Plate,0,2,Ciudad de Lanús,4 de marzo,19:15,Fecha 6
+76,5,43,3,4,Atlético Tucumán,Banfield,1,0,Monumental José Fierro,4 de marzo,21:30,Fecha 6
+77,5,44,18,5,Newell's Old Boys,Barracas Central,1,0,Marcelo Bielsa,4 de marzo,21:30,Fecha 6
+78,5,45,15,16,Independiente,Instituto,2,2,Libertadores de América,5 de marzo,17:00,Fecha 6
+79,5,46,14,23,Huracán,San Lorenzo,1,1,Tomás Adolfo Ducó,5 de marzo,19:15,Fecha 6
+80,5,47,25,28,Talleres (C),Vélez Sarsfield,1,2,Mario Alberto Kempes,5 de marzo,21:30,Fecha 6
+81,5,48,26,1,Tigre,Argentinos Juniors,0,1,Monumental de Victoria,5 de marzo,21:30,Fecha 6
+82,5,49,2,6,Arsenal,Belgrano,0,1,El Viaducto,6 de marzo,17:00,Fecha 6
+83,5,50,13,20,Godoy Cruz,Racing Club,2,0,Malvinas Argentinas,6 de marzo,17:00,Fecha 6
+84,5,51,7,10,Boca Juniors,Defensa y Justicia,0,0,La Bombonera,6 de marzo,21:00,Fecha 6
+85,5,52,5,15,Barracas Central,Independiente,1,1,Claudio Chiqui Tapia,10 de marzo,17:00,Fecha 7
+86,5,53,1,2,Argentinos Juniors,Arsenal,1,1,Diego Armando Maradona,10 de marzo,21:00,Fecha 7
+87,5,54,16,3,Instituto,Atlético Tucumán,1,1,Juan Domingo Perón,10 de marzo,21:00,Fecha 7
+88,5,55,23,12,San Lorenzo,Gimnasia y Esgrima (LP),4,0,Nuevo Gasómetro,11 de marzo,17:00,Fecha 7
+89,5,56,10,25,Defensa y Justicia,Talleres (C),1,1,Norberto Tomaghello,11 de marzo,19:15,Fecha 7
+90,5,57,6,17,Belgrano,Lanús,0,0,Mario Alberto Kempes,11 de marzo,21:30,Fecha 7
+91,5,58,8,26,Central Córdoba (SdE),Tigre,2,0,Único Madre de Ciudades,11 de marzo,21:30,Fecha 7
+92,5,59,20,24,Racing Club,Sarmiento (J),1,0,El Cilindro,12 de marzo,17:00,Fecha 7
+93,5,60,11,14,Estudiantes (LP),Huracán,2,1,Jorge Luis Hirschi,12 de marzo,19:15,Fecha 7
+94,5,61,21,13,River Plate,Godoy Cruz,3,0,Monumental,12 de marzo,19:15,Fecha 7
+95,5,62,4,7,Banfield,Boca Juniors,1,0,Florencio Sola,12 de marzo,21:30,Fecha 7
+96,5,63,22,27,Rosario Central,Unión,1,1,Gigante de Arroyito,12 de marzo,21:30,Fecha 7
+97,5,64,28,19,Vélez Sarsfield,Platense,1,1,José Amalfitani,13 de marzo,21:00,Fecha 7
+98,5,65,9,18,Colón,Newell's Old Boys,1,1,Brigadier Estanislao López,13 de marzo,21:00,Fecha 7
+99,5,66,27,20,Unión,Racing Club,1,3,15 de abril,17 de marzo,21:00,Fecha 8
+100,5,67,2,26,Arsenal,Tigre,2,0,El Viaducto,18 de marzo,16:30,Fecha 8
+101,5,43,19,10,Platense,Defensa y Justicia,1,0,Ciudad de Vicente López,18 de marzo,19:00,Fecha 8
+102,5,44,15,9,Independiente,Colón,2,2,Libertadores de América,18 de marzo,19:00,Fecha 8
+103,5,45,13,6,Godoy Cruz,Belgrano,3,1,Malvinas Argentinas,18 de marzo,21:30,Fecha 8
+104,5,46,3,5,Atlético Tucumán,Barracas Central,1,1,Monumental José Fierro,18 de marzo,21:30,Fecha 8
+105,5,47,12,11,Gimnasia y Esgrima (LP),Estudiantes (LP),2,1,Del Bosque,19 de marzo,16:30,Fecha 8
+106,5,48,7,16,Boca Juniors,Instituto,2,3,La Bombonera,19 de marzo,19:00,Fecha 8
+107,5,49,24,21,Sarmiento (J),River Plate,0,2,Eva Perón,19 de marzo,21:30,Fecha 8
+108,5,50,25,4,Talleres (C),Banfield,0,1,Mario Alberto Kempes,19 de marzo,21:30,Fecha 8
+109,5,51,18,23,Newell's Old Boys,San Lorenzo,1,0,Marcelo Bielsa,20 de marzo,18:30,Fecha 8
+110,5,52,14,22,Huracán,Rosario Central,0,2,Tomás Adolfo Ducó,20 de marzo,21:00,Fecha 8
+111,5,53,17,1,Lanús,Argentinos Juniors,0,0,Ciudad de Lanús,20 de marzo,21:00,Fecha 8
+112,5,54,28,8,Vélez Sarsfield,Central Córdoba (SdE),4,0,José Amalfitani,21 de marzo,21:00,Fecha 8
+113,5,55,10,28,Defensa y Justicia,Vélez Sarsfield,0,0,Norberto Tomaghello,30 de marzo,20:00,Fecha 9
+114,5,56,1,13,Argentinos Juniors,Godoy Cruz,3,0,Diego Armando Maradona,30 de marzo,21:30,Fecha 9
+115,5,57,22,12,Rosario Central,Gimnasia y Esgrima (LP),3,1,Gigante de Arroyito,31 de marzo,19:00,Fecha 9
+116,5,58,11,18,Estudiantes (LP),Newell's Old Boys,3,0,Jorge Luis Hirschi,31 de marzo,19:00,Fecha 9
+117,5,59,21,27,River Plate,Unión,1,0,Monumental,31 de marzo,21:30,Fecha 9
+118,5,60,5,7,Barracas Central,Boca Juniors,0,3,Claudio Chiqui Tapia,1 de abril,15:30,Fecha 9
+119,5,61,23,15,San Lorenzo,Independiente,0,0,Nuevo Gasómetro,1 de abril,19:00,Fecha 9
+120,5,62,20,14,Racing Club,Huracán,2,1,El Cilindro,1 de abril,19:30,Fecha 9
+121,5,63,26,17,Tigre,Lanús,2,1,Monumental de Victoria,1 de abril,21:30,Fecha 9
+122,5,64,16,25,Instituto,Talleres (C),0,3,Juan Domingo Perón,2 de abril,16:30,Fecha 9
+123,5,65,9,3,Colón,Atlético Tucumán,0,0,Brigadier Estanislao López,2 de abril,19:00,Fecha 9
+124,5,66,4,19,Banfield,Platense,0,2,Florencio Sola,2 de abril,21:30,Fecha 9
+125,5,67,6,24,Belgrano,Sarmiento (J),0,0,Mario Alberto Kempes,3 de abril,20:00,Fecha 9
+126,5,43,8,2,Central Córdoba (SdE),Arsenal,1,0,Único Madre de Ciudades,3 de abril,21:30,Fecha 9
+127,5,44,17,2,Lanús,Arsenal,3,0,Ciudad de Lanús,7 de abril,19:00,Fecha 10
+128,5,45,19,16,Platense,Instituto,1,0,Ciudad de Vicente López,7 de abril,19:00,Fecha 10
+129,5,46,25,5,Talleres (C),Barracas Central,3,0,Mario Alberto Kempes,7 de abril,21:30,Fecha 10
+130,5,47,28,4,Vélez Sarsfield,Banfield,3,3,José Amalfitani,7 de abril,21:30,Fecha 10
+131,5,48,24,1,Sarmiento (J),Argentinos Juniors,2,0,Eva Perón,8 de abril,15:30,Fecha 10
+132,5,49,27,6,Unión,Belgrano,0,3,15 de abril,8 de abril,18:00,Fecha 10
+133,5,50,12,20,Gimnasia y Esgrima (LP),Racing Club,3,1,Del Bosque,8 de abril,18:00,Fecha 10
+134,5,51,10,8,Defensa y Justicia,Central Córdoba (SdE),1,2,Norberto Tomaghello,8 de abril,20:30,Fecha 10
+135,5,52,3,23,Atlético Tucumán,San Lorenzo,1,3,Monumental José Fierro,8 de abril,20:30,Fecha 10
+136,5,53,15,11,Independiente,Estudiantes (LP),1,2,Libertadores de América,9 de abril,14:00,Fecha 10
+137,5,54,13,26,Godoy Cruz,Tigre,1,1,Malvinas Argentinas,9 de abril,14:00,Fecha 10
+138,5,55,18,22,Newell's Old Boys,Rosario Central,0,0,Marcelo Bielsa,9 de abril,16:30,Fecha 10
+139,5,56,14,21,Huracán,River Plate,0,3,Tomás Adolfo Ducó,9 de abril,19:00,Fecha 10
+140,5,57,7,9,Boca Juniors,Colón,1,2,La Bombonera,9 de abril,21:30,Fecha 10
+141,5,58,5,19,Barracas Central,Platense,1,0,Claudio Chiqui Tapia,11 de abril,14:00,Fecha 11
+142,5,59,1,27,Argentinos Juniors,Unión,5,1,Diego Armando Maradona,11 de abril,19:00,Fecha 11
+143,5,60,4,10,Banfield,Defensa y Justicia,0,3,Florencio Sola,11 de abril,21:30,Fecha 11
+144,5,61,16,28,Instituto,Vélez Sarsfield,1,0,Juan Domingo Perón,11 de abril,21:30,Fecha 11
+145,5,62,8,17,Central Córdoba (SdE),Lanús,1,1,Único Madre de Ciudades,11 de abril,21:30,Fecha 11
+146,5,63,23,7,San Lorenzo,Boca Juniors,1,0,Nuevo Gasómetro,12 de abril,17:30,Fecha 11
+147,5,64,6,14,Belgrano,Huracán,2,0,Julio César Villagra,12 de abril,19:00,Fecha 11
+148,5,65,20,18,Racing Club,Newell's Old Boys,0,1,El Cilindro,12 de abril,19:30,Fecha 11
+149,5,66,11,3,Estudiantes (LP),Atlético Tucumán,0,0,Jorge Luis Hirschi,12 de abril,21:30,Fecha 11
+150,5,67,22,15,Rosario Central,Independiente,1,0,Gigante de Arroyito,12 de abril,21:30,Fecha 11
+151,5,43,2,13,Arsenal,Godoy Cruz,2,3,El Viaducto,13 de abril,14:00,Fecha 11
+152,5,44,9,25,Colón,Talleres (C),2,2,Brigadier Estanislao López,13 de abril,16:30,Fecha 11
+153,5,45,21,12,River Plate,Gimnasia y Esgrima (LP),3,0,Monumental,13 de abril,19:30,Fecha 11
+154,5,46,26,24,Tigre,Sarmiento (J),1,0,Monumental de Victoria,13 de abril,21:30,Fecha 11
+155,5,47,10,16,Defensa y Justicia,Instituto,0,0,Norberto Tomaghello,15 de abril,16:30,Fecha 12
+156,5,48,7,11,Boca Juniors,Estudiantes (LP),0,0,La Bombonera,15 de abril,19:00,Fecha 12
+157,5,49,14,1,Huracán,Argentinos Juniors,0,0,Tomás Adolfo Ducó,15 de abril,21:30,Fecha 12
+158,5,50,12,6,Gimnasia y Esgrima (LP),Belgrano,0,0,Del Bosque,15 de abril,21:30,Fecha 12
+159,5,51,27,26,Unión,Tigre,0,0,15 de abril,16 de abril,14:00,Fecha 12
+160,5,52,28,5,Vélez Sarsfield,Barracas Central,0,0,José Amalfitani,16 de abril,14:00,Fecha 12
+161,5,53,15,20,Independiente,Racing Club,0,0,Libertadores de América,16 de abril,16:30,Fecha 12
+162,5,54,18,21,Newell's Old Boys,River Plate,0,0,Marcelo Bielsa,16 de abril,19:00,Fecha 12
+163,5,55,25,23,Talleres (C),San Lorenzo,0,0,Mario Alberto Kempes,16 de abril,21:30,Fecha 12
+164,5,56,19,9,Platense,Colón,0,0,Ciudad de Vicente López,17 de abril,16:30,Fecha 12
+165,5,57,24,2,Sarmiento (J),Arsenal,0,0,Eva Perón,17 de abril,19:00,Fecha 12
+166,5,58,4,8,Banfield,Central Córdoba (SdE),0,0,Florencio Sola,17 de abril,19:00,Fecha 12
+167,5,59,3,22,Atlético Tucumán,Rosario Central,0,0,Monumental José Fierro,17 de abril,21:30,Fecha 12
+168,5,60,13,17,Godoy Cruz,Lanús,0,0,Malvinas Argentinas,17 de abril,21:30,Fecha 12
+169,5,61,9,28,Colón,Vélez Sarsfield,0,0,Brigadier Estanislao López,21 de abril,20:30,Fecha 13
+170,5,62,2,27,Arsenal,Unión,0,0,El Viaducto,22 de abril,15:30,Fecha 13
+171,5,63,17,24,Lanús,Sarmiento (J),0,0,Ciudad de Lanús,22 de abril,15:30,Fecha 13
+172,5,64,23,19,San Lorenzo,Platense,0,0,Nuevo Gasómetro,22 de abril,18:00,Fecha 13
+173,5,65,8,13,Central Córdoba (SdE),Godoy Cruz,0,0,Único Madre de Ciudades,22 de abril,20:30,Fecha 13
+174,5,66,6,18,Belgrano,Newell's Old Boys,0,0,Julio César Villagra,22 de abril,20:30,Fecha 13
+175,5,67,22,7,Rosario Central,Boca Juniors,0,0,Gigante de Arroyito,23 de abril,15:30,Fecha 13
+176,5,43,11,25,Estudiantes (LP),Talleres (C),0,0,Jorge Luis Hirschi,23 de abril,18:00,Fecha 13
+177,5,44,16,4,Instituto,Banfield,0,0,Juan Domingo Perón,23 de abril,18:00,Fecha 13
+178,5,45,21,15,River Plate,Independiente,0,0,Monumemtal,23 de abril,20:30,Fecha 13
+179,5,46,5,10,Barracas Central,Defensa y Justicia,0,0,Claudio Chiqui Tapia,24 de abril,15:30,Fecha 13
+180,5,47,20,3,Racing Club,Atlético Tucumán,0,0,El Cilindro,24 de abril,19:00,Fecha 13
+181,5,48,26,14,Tigre,Huracán,0,0,Monumental de Victoria,24 de abril,21:30,Fecha 13
+182,5,49,1,12,Argentinos Juniors,Gimnasia y Esgrima (LP),0,0,Diego Armando Maradona,24 de abril,21:30,Fecha 13
+183,5,50,19,11,Platense,Estudiantes (LP),0,0,Ciudad de Vicente López,27 de abril,20:00,Fecha 14
+184,5,51,24,13,Sarmiento (J),Godoy Cruz,0,0,Eva Perón,27 de abril,20:00,Fecha 14
+185,5,52,14,2,Huracán,Arsenal,0,0,Tomás Adolfo Ducó,28 de abril,19:00,Fecha 14
+186,5,53,18,1,Newell's Old Boys,Argentinos Juniors,0,0,Marcelo Bielsa,28 de abril,19:00,Fecha 14
+187,5,54,3,21,Atlético Tucumán,River Plate,0,0,Monumental José Fierro,28 de abril,21:30,Fecha 14
+188,5,55,28,23,Vélez Sarsfield,San Lorenzo,0,0,José Amalfitani,29 de abril,14:00,Fecha 14
+189,5,56,12,26,Gimnasia y Esgrima (LP),Tigre,0,0,Del Bosque,29 de abril,16:30,Fecha 14
+190,5,57,16,8,Instituto,Central Córdoba (SdE),0,0,Juan Domingo Perón,29 de abril,19:00,Fecha 14
+191,5,58,4,5,Banfield,Barracas Central,0,0,Florencio Sola,29 de abril,19:00,Fecha 14
+192,5,59,7,20,Boca Juniors,Racing Club,0,0,La Bombonera,29 de abril,21:30,Fecha 14
+193,5,60,10,9,Defensa y Justicia,Colón,0,0,Norberto Tomaghello,30 de abril,15:30,Fecha 14
+194,5,61,15,6,Independiente,Belgrano,0,0,Libertadores de América,30 de abril,18:00,Fecha 14
+195,5,62,27,17,Unión,Lanús,0,0,15 de abril,30 de abril,20:30,Fecha 14
+196,5,63,25,22,Talleres (C),Rosario Central,0,0,Mario Alberto Kempes,30 de abril,20:30,Fecha 14
+197,5,64,5,16,Barracas Central,Instituto,0,0,Claudio Chiqui Tapia,5 de mayo,15:30,Fecha 15
+198,5,65,13,27,Godoy Cruz,Unión,0,0,Malvinas Argentinas,5 de mayo,21:30,Fecha 15
+199,5,66,17,14,Lanús,Huracán,0,0,Ciudad de Lanús,6 de mayo,15:30,Fecha 15
+200,5,67,9,4,Colón,Banfield,0,0,Brigadier Estanislao López,6 de mayo,18:00,Fecha 15
+201,5,43,6,3,Belgrano,Atlético Tucumán,0,0,Julio César Villagra,6 de mayo,18:00,Fecha 15
+202,5,44,1,15,Argentinos Juniors,Independiente,0,0,Diego Armando Maradona,6 de mayo,20:30,Fecha 15
+203,5,45,22,19,Rosario Central,Platense,0,0,Gigante de Arroyito,7 de mayo,14:00,Fecha 15
+204,5,46,21,7,River Plate,Boca Juniors,0,0,Monumental,7 de mayo,17:30,Fecha 15
+205,5,47,26,18,Tigre,Newell's Old Boys,0,0,Monumental de Victoria,7 de mayo,21:00,Fecha 15
+206,5,48,11,28,Estudiantes (LP),Vélez Sarsfield,0,0,Jorge Luis Hirschi,7 de mayo,21:00,Fecha 15
+207,5,49,2,12,Arsenal,Gimnasia y Esgrima (LP),0,0,El Viaducto,8 de mayo,15:30,Fecha 15
+208,5,50,23,10,San Lorenzo,Defensa y Justicia,0,0,Nuevo Gasómetro,8 de mayo,18:00,Fecha 15
+209,5,51,20,25,Racing Club,Talleres (C),0,0,El Cilindro,8 de mayo,19:30,Fecha 15
+210,5,52,8,24,Central Córdoba (SdE),Sarmiento (J),0,0,Único Madre de Ciudades,8 de mayo,21:30,Fecha 15
+211,5,53,14,13,Huracán,Godoy Cruz,0,0,Tomás Adolfo Ducó,12 de mayo,20:00,Fecha 16
+212,5,54,3,1,Atlético Tucumán,Argentinos Juniors,0,0,Monumental José Fierro,12 de mayo,21:30,Fecha 16
+213,5,55,15,26,Independiente,Tigre,0,0,Libertadores de América,13 de mayo,15:30,Fecha 16
+214,5,56,4,23,Banfield,San Lorenzo,0,0,Florencio Sola,13 de mayo,18:00,Fecha 16
+215,5,57,16,9,Instituto,Colón,0,0,Juan Domingo Perón,13 de mayo,20:30,Fecha 16
+216,5,58,18,2,Newell's Old Boys,Arsenal,0,0,Marcelo Bielsa,13 de mayo,20:30,Fecha 16
+217,5,59,10,11,Defensa y Justicia,Estudiantes (LP),0,0,Norberto Tomaghello,14 de mayo,14:00,Fecha 16
+218,5,60,19,20,Platense,Racing Club,0,0,Ciudad de Vicente López,14 de mayo,16:30,Fecha 16
+219,5,61,7,6,Boca Juniors,Belgrano,0,0,La Bombonera,14 de mayo,19:00,Fecha 16
+220,5,62,25,21,Talleres (C),River Plate,0,0,Mario Alberto Kempes,14 de mayo,21:30,Fecha 16
+221,5,63,5,8,Barracas Central,Central Córdoba (SdE),0,0,Claudio Chiqui Tapia,15 de mayo,15:30,Fecha 16
+222,5,64,12,17,Gimnasia y Esgrima (LP),Lanús,0,0,Del Bosque,15 de mayo,18:00,Fecha 16
+223,5,65,28,22,Vélez Sarsfield,Rosario Central,0,0,José Amalfitani,15 de mayo,20:30,Fecha 16
+224,5,66,27,24,Unión,Sarmiento (J),0,0,15 de Abril,15 de mayo,20:30,Fecha 16
+225,5,67,8,27,Central Córdoba (SdE),Unión,,,Único Madre de Ciudades,21 de mayo,A determinar,Fecha 17
+226,5,43,24,14,Sarmiento (J),Huracán,,,Eva Perón,21 de mayo,A determinar,Fecha 17
+227,5,44,13,12,Godoy Cruz,Gimnasia y Esgrima (LP),,,Malvinas Argentinas,21 de mayo,A determinar,Fecha 17
+228,5,45,17,18,Lanús,Newell's Old Boys,,,Ciudad de Lanús,21 de mayo,A determinar,Fecha 17
+229,5,46,2,15,Arsenal,Independiente,,,El Viaducto,21 de mayo,A determinar,Fecha 17
+230,5,47,26,3,Tigre,Atlético Tucumán,,,Monumental de Victoria,21 de mayo,A determinar,Fecha 17
+231,5,48,1,7,Argentinos Juniors,Boca Juniors,,,Diego Armando Maradona,21 de mayo,A determinar,Fecha 17
+232,5,49,6,25,Belgrano,Talleres (C),,,Julio César Villagra,21 de mayo,A determinar,Fecha 17
+233,5,50,21,19,River Plate,Platense,,,Monumental,21 de mayo,A determinar,Fecha 17
+234,5,51,20,28,Racing Club,Vélez Sarsfield,,,El Cilindro,21 de mayo,A determinar,Fecha 17
+235,5,52,22,10,Rosario Central,Defensa y Justicia,,,Gigante de Arroyito,21 de mayo,A determinar,Fecha 17
+236,5,53,11,4,Estudiantes (LP),Banfield,,,Jorge Luis Hirschi,21 de mayo,A determinar,Fecha 17
+237,5,54,23,16,San Lorenzo,Instituto,,,Nuevo Gasómetro,21 de mayo,A determinar,Fecha 17
+238,5,55,9,5,Colón,Barracas Central,,,Brigadier Estanislao López,21 de mayo,A determinar,Fecha 17
+239,5,56,9,8,Colón,Central Córdoba (SdE),,,Brigadier Estanislao López,28 de mayo,A determinar,Fecha 18
+240,5,57,5,23,Barracas Central,San Lorenzo,,,Claudio Chiqui Tapia,28 de mayo,A determinar,Fecha 18
+241,5,58,16,11,Instituto,Estudiantes (LP),,,Juan Domingo Perón,28 de mayo,A determinar,Fecha 18
+242,5,59,4,22,Banfield,Rosario Central,,,Florencio Sola,28 de mayo,A determinar,Fecha 18
+243,5,60,10,20,Defensa y Justicia,Racing Club,,,Norberto Tomaghello,28 de mayo,A determinar,Fecha 18
+244,5,61,28,21,Vélez Sarsfield,River Plate,,,José Amalfitani,28 de mayo,A determinar,Fecha 18
+245,5,62,19,6,Platense,Belgrano,,,Ciudad de Vicente López,28 de mayo,A determinar,Fecha 18
+246,5,63,25,1,Talleres (C),Argentinos Juniors,,,Mario Alberto Kempes,28 de mayo,A determinar,Fecha 18
+247,5,64,7,26,Boca Juniors,Tigre,,,La Bombonera,28 de mayo,A determinar,Fecha 18
+248,5,65,3,2,Atlético Tucumán,Arsenal,,,Monumental José Fierro,28 de mayo,A determinar,Fecha 18
+249,5,66,15,17,Independiente,Lanús,,,Libertadores de América,28 de mayo,A determinar,Fecha 18
+250,5,67,18,13,Newell's Old Boys,Godoy Cruz,,,Marcelo Bielsa,28 de mayo,A determinar,Fecha 18
+251,5,43,12,24,Gimnasia y Esgrima (LP),Sarmiento (J),,,Del Bosque,28 de mayo,A determinar,Fecha 18
+252,5,44,14,27,Huracán,Unión,,,Tomás Adolfo Ducó,28 de mayo,A determinar,Fecha 18
+253,5,45,8,14,Central Córdoba (SdE),Huracán,,,Único Madre de Ciudades,4 de junio,A determinar,Fecha 19
+254,5,46,27,12,Unión,Gimnasia y Esgrima (LP),,,15 de abril,4 de junio,A determinar,Fecha 19
+255,5,47,24,18,Sarmiento (J),Newell's Old Boys,,,Eva Perón,4 de junio,A determinar,Fecha 19
+256,5,48,13,15,Godoy Cruz,Independiente,,,Malvinas Argentinas,4 de junio,A determinar,Fecha 19
+257,5,49,17,3,Lanús,Atlético Tucumán,,,Ciudad de Lanús,4 de junio,A determinar,Fecha 19
+258,5,50,2,7,Arsenal,Boca Juniors,,,El Viaducto,4 de junio,A determinar,Fecha 19
+259,5,51,26,25,Tigre,Talleres (C),,,Monumental de Victoria,4 de junio,A determinar,Fecha 19
+260,5,52,1,19,Argentinos Juniors,Platense,,,Diego Armando Maradona,4 de junio,A determinar,Fecha 19
+261,5,53,6,28,Belgrano,Vélez Sarsfield,,,Julio César Villagra,4 de junio,A determinar,Fecha 19
+262,5,54,21,10,River Plate,Defensa y Justicia,,,Monumental,4 de junio,A determinar,Fecha 19
+263,5,55,20,4,Racing Club,Banfield,,,El Cilindro,4 de junio,A determinar,Fecha 19
+264,5,56,22,16,Rosario Central,Instituto,,,Gigante de Arroyito,4 de junio,A determinar,Fecha 19
+265,5,57,11,5,Estudiantes (LP),Barracas Central,,,Jorge Luis Hirschi,4 de junio,A determinar,Fecha 19
+266,5,58,23,9,San Lorenzo,Colón,,,Nuevo Gasómetro,4 de junio,A determinar,Fecha 19
+267,5,59,23,8,San Lorenzo,Central Córdoba (SdE),,,Nuevo Gasómetro,11 de junio,A determinar,Fecha 20
+268,5,60,9,11,Colón,Estudiantes (LP),,,Brigadier Estanislao López,11 de junio,A determinar,Fecha 20
+269,5,61,5,22,Barracas Central,Rosario Central,,,Claudio Chiqui Tapia,11 de junio,A determinar,Fecha 20
+270,5,62,16,20,Instituto,Racing Club,,,Juan Domingo Perón,11 de junio,A determinar,Fecha 20
+271,5,63,4,21,Banfield,River Plate,,,Florencio Sola,11 de junio,A determinar,Fecha 20
+272,5,64,10,6,Defensa y Justicia,Belgrano,,,Norberto Tomaghello,11 de junio,A determinar,Fecha 20
+273,5,65,28,1,Vélez Sarsfield,Argentinos Juniors,,,José Amalfitani,11 de junio,A determinar,Fecha 20
+274,5,66,19,26,Platense,Tigre,,,Ciudad de Vicente López,11 de junio,A determinar,Fecha 20
+275,5,67,25,2,Talleres (C),Arsenal,,,Mario Alberto Kempes,11 de junio,A determinar,Fecha 20
+276,5,43,7,17,Boca Juniors,Lanús,,,La Bombonera,11 de junio,A determinar,Fecha 20
+277,5,44,3,13,Atlético Tucumán,Godoy Cruz,,,Monumental José Fierro,11 de junio,A determinar,Fecha 20
+278,5,45,15,24,Independiente,Sarmiento (J),,,Libertadores de América,11 de junio,A determinar,Fecha 20
+279,5,46,18,27,Newell's Old Boys,Unión,,,Marcelo Bielsa,11 de junio,A determinar,Fecha 20
+280,5,47,12,14,Gimnasia y Esgrima (LP),Huracán,,,Del Bosque,11 de junio,A determinar,Fecha 20
+281,5,48,8,12,Central Córdoba (SdE),Gimnasia y Esgrima (LP),,,Único Madre de Ciudades,25 de junio,A determinar,Fecha 21
+282,5,49,14,18,Huracán,Newell's Old Boys,,,Tomás Adolfo Ducó,25 de junio,A determinar,Fecha 21
+283,5,50,27,15,Unión,Independiente,,,15 de abril,25 de junio,A determinar,Fecha 21
+284,5,51,24,3,Sarmiento (J),Atlético Tucumán,,,Eva Perón,25 de junio,A determinar,Fecha 21
+285,5,52,13,7,Godoy Cruz,Boca Juniors,,,Malvinas Argentinas,25 de junio,A determinar,Fecha 21
+286,5,53,17,25,Lanús,Talleres (C),,,Ciudad de Lanús,25 de junio,A determinar,Fecha 21
+287,5,54,2,19,Arsenal,Platense,,,El Viaducto,25 de junio,A determinar,Fecha 21
+288,5,55,26,28,Tigre,Vélez Sarsfield,,,Monumental de Victoria,25 de junio,A determinar,Fecha 21
+289,5,56,1,10,Argentinos Juniors,Defensa y Justicia,,,Diego Armando Maradona,25 de junio,A determinar,Fecha 21
+290,5,57,6,4,Belgrano,Banfield,,,Julio César Villagra,25 de junio,A determinar,Fecha 21
+291,5,58,21,16,River Plate,Instituto,,,Monumental,25 de junio,A determinar,Fecha 21
+292,5,59,20,5,Racing Club,Barracas Central,,,El Cilindro,25 de junio,A determinar,Fecha 21
+293,5,60,22,9,Rosario Central,Colón,,,Gigante de Arroyito,25 de junio,A determinar,Fecha 21
+294,5,61,11,23,Estudiantes (LP),San Lorenzo,,,Jorge Luis Hirschi,25 de junio,A determinar,Fecha 21
+295,5,62,11,8,Estudiantes (LP),Central Córdoba (SdE),,,Jorge Luis Hirschi,2 de julio,A determinar,Fecha 22
+296,5,63,23,22,San Lorenzo,Rosario Central,,,Nuevo Gasómetro,2 de julio,A determinar,Fecha 22
+297,5,64,9,20,Colón,Racing Club,,,Brigadier Estanislao López,2 de julio,A determinar,Fecha 22
+298,5,65,5,21,Barracas Central,River Plate,,,Claudio Chiqui Tapia,2 de julio,A determinar,Fecha 22
+299,5,66,16,6,Instituto,Belgrano,,,Juan Domingo Perón,2 de julio,A determinar,Fecha 22
+300,5,67,4,1,Banfield,Argentinos Juniors,,,Florencio Sola,2 de julio,A determinar,Fecha 22
+301,5,43,10,26,Defensa y Justicia,Tigre,,,Norberto Tomaghello,2 de julio,A determinar,Fecha 22
+302,5,44,28,2,Vélez Sarsfield,Arsenal,,,José Amalfitani,2 de julio,A determinar,Fecha 22
+303,5,45,19,17,Platense,Lanús,,,Ciudad de Vicente López,2 de julio,A determinar,Fecha 22
+304,5,46,25,13,Talleres (C),Godoy Cruz,,,Mario Alberto Kempes,2 de julio,A determinar,Fecha 22
+305,5,47,7,24,Boca Juniors,Sarmiento (J),,,La Bombonera,2 de julio,A determinar,Fecha 22
+306,5,48,3,27,Atlético Tucumán,Unión,,,Monumental José Fierro,2 de julio,A determinar,Fecha 22
+307,5,49,15,14,Independiente,Huracán,,,Libertadores de América,2 de julio,A determinar,Fecha 22
+308,5,50,18,12,Newell's Old Boys,Gimnasia y Esgrima (LP),,,Marcelo Bielsa,2 de julio,A determinar,Fecha 22
+309,5,51,8,18,Central Córdoba (SdE),Newell's Old Boys,,,Único Madre de Ciudades,5 de julio,A determinar,Fecha 23
+310,5,52,12,15,Gimnasia y Esgrima (LP),Independiente,,,Del Bosque,5 de julio,A determinar,Fecha 23
+311,5,53,14,3,Huracán,Atlético Tucumán,,,Tomás Adolfo Ducó,5 de julio,A determinar,Fecha 23
+312,5,54,27,7,Unión,Boca Juniors,,,15 de abril,5 de julio,A determinar,Fecha 23
+313,5,55,24,25,Sarmiento (J),Talleres (C),,,Eva Perón,5 de julio,A determinar,Fecha 23
+314,5,56,13,19,Godoy Cruz,Platense,,,Malvinas Argentinas,5 de julio,A determinar,Fecha 23
+315,5,57,17,28,Lanús,Vélez Sarsfield,,,Ciudad de Lanús,5 de julio,A determinar,Fecha 23
+316,5,58,2,10,Arsenal,Defensa y Justicia,,,El Viaducto,5 de julio,A determinar,Fecha 23
+317,5,59,26,4,Tigre,Banfield,,,Monumental de Victoria,5 de julio,A determinar,Fecha 23
+318,5,60,1,16,Argentinos Juniors,Instituto,,,Diego Armando Maradona,5 de julio,A determinar,Fecha 23
+319,5,61,6,5,Belgrano,Barracas Central,,,Julio César Villagra,5 de julio,A determinar,Fecha 23
+320,5,62,21,9,River Plate,Colón,,,Monumental,5 de julio,A determinar,Fecha 23
+321,5,63,20,23,Racing Club,San Lorenzo,,,El Cilindro,5 de julio,A determinar,Fecha 23
+322,5,64,22,11,Rosario Central,Estudiantes (LP),,,Gigante de Arroyito,5 de julio,A determinar,Fecha 23
+323,5,65,22,8,Rosario Central,Central Córdoba (SdE),,,Gigante de Arroyito,9 de julio,A determinar,Fecha 24
+324,5,66,11,20,Estudiantes (LP),Racing Club,,,Jorge Luis Hirschi,9 de julio,A determinar,Fecha 24
+325,5,67,23,21,San Lorenzo,River Plate,,,Nuevo Gasómetro,9 de julio,A determinar,Fecha 24
+326,5,43,9,6,Colón,Belgrano,,,Brigadier Estanislao López,9 de julio,A determinar,Fecha 24
+327,5,44,5,1,Barracas Central,Argentinos Juniors,,,Claudio Chiqui Tapia,9 de julio,A determinar,Fecha 24
+328,5,45,16,26,Instituto,Tigre,,,Juan Domingo Perón,9 de julio,A determinar,Fecha 24
+329,5,46,4,2,Banfield,Arsenal,,,Florencio Sola,9 de julio,A determinar,Fecha 24
+330,5,47,10,17,Defensa y Justicia,Lanús,,,Norberto Tomaghello,9 de julio,A determinar,Fecha 24
+331,5,48,28,13,Vélez Sarsfield,Godoy Cruz,,,José Amalfitani,9 de julio,A determinar,Fecha 24
+332,5,49,19,24,Platense,Sarmiento (J),,,Ciudad de Vicente López,9 de julio,A determinar,Fecha 24
+333,5,50,25,27,Talleres (C),Unión,,,Mario Alberto Kempes,9 de julio,A determinar,Fecha 24
+334,5,51,7,14,Boca Juniors,Huracán,,,La Bombonera,9 de julio,A determinar,Fecha 24
+335,5,52,3,12,Atlético Tucumán,Gimnasia y Esgrima (LP),,,Monumental de José Fierro,9 de julio,A determinar,Fecha 24
+336,5,53,15,18,Independiente,Newell's Old Boys,,,Libertadores de América,9 de julio,A determinar,Fecha 24
+337,5,54,8,15,Central Córdoba (SdE),Independiente,,,Único Madre de Ciudades,16 de julio,A determinar,Fecha 25
+338,5,55,18,3,Newell's Old Boys,Atlético Tucumán,,,Marcelo Bielsa,16 de julio,A determinar,Fecha 25
+339,5,56,12,7,Gimnasia y Esgrima (LP),Boca Juniors,,,Del Bosque,16 de julio,A determinar,Fecha 25
+340,5,57,14,25,Huracán,Talleres (C),,,Tomás Adolfo Ducó,16 de julio,A determinar,Fecha 25
+341,5,58,27,19,Unión,Platense,,,15 de abril,16 de julio,A determinar,Fecha 25
+342,5,59,24,28,Sarmiento (J),Vélez Sarsfield,,,Eva Perón,16 de julio,A determinar,Fecha 25
+343,5,60,13,10,Godoy Cruz,Defensa y Justicia,,,Malvinas Argentinas,16 de julio,A determinar,Fecha 25
+344,5,61,17,4,Lanús,Banfield,,,Ciudad de Lanús,16 de julio,A determinar,Fecha 25
+345,5,62,2,16,Arsenal,Instituto,,,El Viaducto,16 de julio,A determinar,Fecha 25
+346,5,63,26,5,Tigre,Barracas Central,,,Monumental de Victoria,16 de julio,A determinar,Fecha 25
+347,5,64,1,9,Argentinos Juniors,Colón,,,Diego Armando Maradona,16 de julio,A determinar,Fecha 25
+348,5,65,6,23,Belgrano,San Lorenzo,,,Julio César Villagra,16 de julio,A determinar,Fecha 25
+349,5,66,21,11,River Plate,Estudiantes (LP),,,Monumental,16 de julio,A determinar,Fecha 25
+350,5,67,20,22,Racing Club,Rosario Central,,,El Cilindro,16 de julio,A determinar,Fecha 25
+351,5,43,20,8,Racing Club,Central Córdoba (SdE),,,El Cilindro,23 de julio,A determinar,Fecha 26
+352,5,44,22,21,Rosario Central,River Plate,,,Gigante de Arroyito,23 de julio,A determinar,Fecha 26
+353,5,45,11,6,Estudiantes (LP),Belgrano,,,Jorge Luis Hirschi,23 de julio,A determinar,Fecha 26
+354,5,46,23,1,San Lorenzo,Argentinos Juniors,,,Nuevo Gasómetro,23 de julio,A determinar,Fecha 26
+355,5,47,9,26,Colón,Tigre,,,Brigadier Estanislao López,23 de julio,A determinar,Fecha 26
+356,5,48,5,2,Barracas Central,Arsenal,,,Claudio Chiqui Tapia,23 de julio,A determinar,Fecha 26
+357,5,49,16,17,Instituto,Lanús,,,Juan Domingo Perón,23 de julio,A determinar,Fecha 26
+358,5,50,4,13,Banfield,Godoy Cruz,,,Florencio Sola,23 de julio,A determinar,Fecha 26
+359,5,51,10,24,Defensa y Justicia,Sarmiento (J),,,Norberto Tomaghello,23 de julio,A determinar,Fecha 26
+360,5,52,28,27,Vélez Sarsfield,Unión,,,José Amalfitani,23 de julio,A determinar,Fecha 26
+361,5,53,19,14,Platense,Huracán,,,Ciudad de Vicente López,23 de julio,A determinar,Fecha 26
+362,5,54,25,12,Talleres (C),Gimnasia y Esgrima (LP),,,Mario Alberto Kempes,23 de julio,A determinar,Fecha 26
+363,5,55,7,18,Boca Juniors,Newell's Old Boys,,,La Bombonera,23 de julio,A determinar,Fecha 26
+364,5,56,3,15,Atlético Tucumán,Independiente,,,Monumental José Fierro,23 de julio,A determinar,Fecha 26
+365,5,57,8,3,Central Córdoba (SdE),Atlético Tucumán,,,Único Madre de Ciudades,30 de julio,A determinar,Fecha 27
+366,5,58,15,7,Independiente,Boca Juniors,,,Libertadores de América,30 de julio,A determinar,Fecha 27
+367,5,59,18,25,Newell's Old Boys,Talleres (C),,,Marcelo Bielsa,30 de julio,A determinar,Fecha 27
+368,5,60,12,19,Gimnasia y Esgrima (LP),Platense,,,Del Bosque,30 de julio,A determinar,Fecha 27
+369,5,61,14,28,Huracán,Vélez Sarsfield,,,Tomás Adolfo Ducó,30 de julio,A determinar,Fecha 27
+370,5,62,27,10,Unión,Defensa y Justicia,,,15 de abril,30 de julio,A determinar,Fecha 27
+371,5,63,24,4,Sarmiento (J),Banfield,,,Eva Perón,30 de julio,A determinar,Fecha 27
+372,5,64,13,16,Godoy Cruz,Instituto,,,Malvinas Argentinas,30 de julio,A determinar,Fecha 27
+373,5,65,17,5,Lanús,Barracas Central,,,Ciudad de Lanús,30 de julio,A determinar,Fecha 27
+374,5,66,2,9,Arsenal,Colón,,,El Viaducto,30 de julio,A determinar,Fecha 27
+375,5,67,26,23,Tigre,San Lorenzo,,,Monumental de Victoria,30 de julio,A determinar,Fecha 27
+376,5,68,1,11,Argentinos Juniors,Estudiantes (LP),,,Diego Armando Maradona,30 de julio,A determinar,Fecha 27
+377,5,69,6,22,Belgrano,Rosario Central,,,Julio César Villagra,30 de julio,A determinar,Fecha 27
+378,5,2,21,20,River Plate,Racing Club,,,Monumental,30 de julio,A determinar,Fecha 27

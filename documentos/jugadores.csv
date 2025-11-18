@@ -1,0 +1,703 @@
+1,3,Marchiori, Tomás,Atl. Tucumán,11,1,0,0,0,0,Arq
+2,1,Lanzillotta, Federico,Argentinos,11,1,0,0,0,0,Arq
+3,1,Mac Allister, Kevin,Argentinos,11,2,3,0,0,0,Def
+4,1,Montiel, Santiago,Argentinos,9,0,1,1,0,0,Def
+5,1,Di Césare, Marco,Argentinos,3,0,0,0,0,0,Def
+6,1,Torrén, Miguel Ángel,Argentinos,9,2,0,0,0,0,Def
+7,1,Villalba, Lucas,Argentinos,10,0,0,0,0,0,Def
+8,1,Sánchez, Luciano,Argentinos,5,0,0,0,0,0,Def
+9,1,Bíttolo, Mariano,Argentinos,1,0,0,0,0,0,Def
+10,1,González, Leonel,Argentinos,2,0,0,0,0,0,Def
+11,1,González Metilli, Francisco,Argentinos,11,1,2,0,0,0,Vol
+12,1,Redondo, Federico,Argentinos,10,1,0,1,0,0,Vol
+13,1,Domínguez, Fabricio,Argentinos,9,2,0,0,0,0,Vol
+14,1,Moyano, Franco,Argentinos,9,1,0,0,0,0,Vol
+15,1,Rodríguez, Alan,Argentinos,5,0,0,0,0,0,Vol
+16,1,Vera, Matías,Argentinos,2,0,0,0,0,0,Vol
+17,1,Heredia, Leonardo,Argentinos,5,0,0,1,0,0,Vol
+18,1,Ávalos, Gabriel,Argentinos,11,2,5,0,0,2,Del
+19,1,Cabral, Rodrigo,Argentinos,10,0,1,0,0,0,Del
+20,1,Cabrera, Javier,Argentinos,8,1,0,0,0,0,Del
+21,1,Nuss, Thiago,Argentinos,9,2,0,0,0,0,Del
+22,1,Verón, Gastón,Argentinos,11,2,0,0,0,0,Del
+23,1,Ferreyra, Facundo,Argentinos,6,1,0,0,0,0,Del
+24,1,Herrera, José María,Argentinos,5,1,0,0,0,0,Del
+25,2,Medina, Alejandro,Arsenal,11,3,0,0,0,0,Arq
+26,2,Sultani, Tomás,Arsenal,1,1,0,0,0,0,Arq
+27,2,Spörle, Adrián,Arsenal,10,2,1,1,0,0,Def
+28,2,Centurión, Maximiliano,Arsenal,11,2,0,0,0,0,Def
+29,2,Peña Biafore, Felipe,Arsenal,11,3,0,0,1,0,Def
+30,2,Gariglio, Ignacio,Arsenal,6,3,0,0,0,0,Def
+31,2,Breitenbruch, Néstor,Arsenal,6,0,0,0,0,0,Def
+32,2,Souto, Lucas,Arsenal,8,3,0,0,0,0,Def
+33,2,Pombo, Joaquín,Arsenal,5,1,0,1,0,0,Def
+34,2,Cardozo, Facundo,Arsenal,5,1,0,0,0,0,Def
+35,2,Marchi, Leonardo,Arsenal,1,0,0,0,0,0,Def
+36,2,Toloza, Santiago,Arsenal,8,1,2,0,0,0,Vol
+37,2,Banega, Tiago,Arsenal,9,2,1,0,0,0,Vol
+38,2,Rivero, Braian,Arsenal,8,0,0,0,0,0,Vol
+39,2,Muscia, Gonzalo,Arsenal,6,0,0,0,0,0,Vol
+40,2,Vega, Franco,Arsenal,8,0,0,0,0,0,Vol
+41,2,Guzmán, Lautaro,Arsenal,11,1,1,0,0,1,Del
+42,2,Leal, Luis,Arsenal,10,1,3,0,0,0,Del
+43,2,Brochero, Lucas,Arsenal,7,0,0,0,0,0,Del
+44,2,Cuesta, Juan Manuel,Arsenal,6,0,0,0,0,0,Del
+45,2,Paiva, Santiago,Arsenal,5,1,0,0,0,0,Del
+46,2,Pons, Facundo,Arsenal,5,2,0,0,0,0,Del
+47,2,Londoño, Flabián,Arsenal,7,0,0,0,0,0,Del
+48,2,Sives, Tomás,Arsenal,6,1,0,0,0,0,Del
+49,2,Zárate, Tobías,Arsenal,4,0,0,0,0,0,Del
+50,3,Romero, Nicolás,Atl. Tucumán,7,2,1,0,0,0,Def
+51,3,Bianchi, Bruno,Atl. Tucumán,11,2,0,0,0,0,Def
+52,3,Brandán, Moisés,Atl. Tucumán,3,1,0,0,0,0,Def
+53,3,Cabral, Jonathan,Atl. Tucumán,5,1,0,0,0,0,Def
+54,3,Orihuela, Matías,Atl. Tucumán,11,0,0,0,0,0,Def
+55,3,De la Fuente, Hernán,Atl. Tucumán,9,2,0,0,0,0,Def
+56,3,Ortiz, Marcelo,Atl. Tucumán,1,1,0,0,0,0,Def
+57,3,Pereyra, Joaquín,Atl. Tucumán,10,3,0,1,0,0,Vol
+58,3,González, Marcelo,Atl. Tucumán,6,1,1,0,0,0,Vol
+59,3,Acosta, Guillermo,Atl. Tucumán,10,3,0,1,0,0,Vol
+60,3,Kociubinski, Bautista,Atl. Tucumán,8,3,0,0,0,0,Vol
+61,3,Tesuri, Renzo,Atl. Tucumán,10,0,0,0,0,0,Vol
+62,3,Sánchez, Adrián,Atl. Tucumán,8,2,0,0,0,0,Vol
+63,3,Di Franco, Francisco,Atl. Tucumán,6,2,0,0,0,0,Vol
+64,3,Naranjo, Lucas,Atl. Tucumán,1,0,0,0,0,0,Vol
+65,3,Coronel, Mateo,Atl. Tucumán,11,1,2,0,0,0,Del
+66,3,Estigarribia, Marcelo,Atl. Tucumán,11,2,2,0,0,0,Del
+67,3,Ruiz Rodríguez, Ramiro,Atl. Tucumán,9,1,0,0,0,0,Del
+68,3,Guille, Braian,Atl. Tucumán,6,0,0,0,0,0,Del
+69,3,Maestro Puch, Ignacio,Atl. Tucumán,8,0,0,1,0,0,Del
+70,3,Menéndez, Cristian,Atl. Tucumán,8,0,0,0,0,0,Del
+71,3,Isa Luna, Kevin,Atl. Tucumán,1,0,0,0,0,0,Del
+72,4,Cambeses, Facundo,Banfield,11,1,0,0,0,0,Arq
+73,4,Quirós, Aarón,Banfield,6,0,1,0,0,0,Def
+74,4,Di Pippa, Alan,Banfield,5,1,0,0,0,0,Def
+75,4,Insúa, Emanuel,Banfield,9,2,0,0,0,0,Def
+76,4,Maciel, Alejandro,Banfield,11,2,0,0,0,0,Def
+77,4,Olivera, Emmanuel,Banfield,7,3,0,0,0,0,Def
+78,4,Souto, Pedro,Banfield,3,1,0,0,0,0,Def
+79,4,Coronel, Emanuel,Banfield,9,2,0,1,0,0,Def
+80,4,Pérez, Mateo,Banfield,1,0,0,0,0,0,Def
+81,4,Alemán, Brahian,Banfield,11,3,0,0,0,1,Vol
+82,4,Cabrera, Alejandro,Banfield,9,2,0,1,0,0,Vol
+83,4,Remedi, Eric,Banfield,9,2,0,0,0,0,Vol
+84,4,Adoryan, Tomás,Banfield,2,0,0,0,0,0,Vol
+85,4,Bertolo, Nicolás,Banfield,4,2,0,0,0,0,Vol
+86,4,Rodríguez, Ignacio,Banfield,9,0,0,0,0,0,Vol
+87,4,Romero, Matías,Banfield,4,0,0,0,0,0,Vol
+88,4,Ríos, Lautaro,Banfield,1,0,0,0,0,0,Vol
+89,4,Giménez, Milton,Banfield,8,1,1,0,0,0,Del
+90,4,Chávez, Andrés,Banfield,11,3,1,0,0,0,Del
+91,4,Sosa Sánchez, Sebastián,Banfield,10,1,1,1,0,0,Del
+92,4,Bisanz, Juan Francisco,Banfield,10,1,0,0,0,0,Del
+93,4,Sosa Sánchez, Nicolás,Banfield,9,1,0,0,0,0,Del
+94,4,Piedrahita, Alejandro,Banfield,3,0,0,0,0,0,Del
+95,4,Tijanovich, Horacio,Banfield,3,0,0,0,0,0,Del
+96,4,Urzi, Agustín,Banfield,1,0,0,0,0,0,Del
+97,5,Desábato, Andrés,Barracas Ctral.,11,0,0,0,0,0,Arq
+98,5,Capraro, Nicolás,Barracas Ctral.,5,2,1,0,0,0,Def
+99,5,Álvarez, Francisco,Barracas Ctral.,10,0,1,0,0,0,Def
+100,5,Calderara, Brian,Barracas Ctral.,7,0,0,0,0,0,Def
+101,5,Herrera, Rodrigo,Barracas Ctral.,8,2,0,0,0,0,Def
+102,5,Rodríguez, Maximiliano,Barracas Ctral.,5,0,0,0,0,0,Def
+103,5,Peinipil, Mauro,Barracas Ctral.,6,1,0,0,0,0,Def
+104,5,Díaz, Juan Ignacio,Barracas Ctral.,11,0,0,0,0,0,Def
+105,5,Dáttola, Agustín,Barracas Ctral.,5,2,0,0,1,0,Def
+106,5,Prado, Fernando,Barracas Ctral.,3,0,0,0,0,0,Def
+107,5,Tolosa, Nicolás,Barracas Ctral.,1,0,0,0,0,0,Def
+108,5,Mastronicola, Bruno,Barracas Ctral.,1,0,0,1,0,0,Def
+109,5,Mater, Facundo,Barracas Ctral.,9,2,2,0,0,0,Vol
+110,5,Arce, Carlos,Barracas Ctral.,9,4,1,0,0,0,Vol
+111,5,Tapia, Iván,Barracas Ctral.,11,2,0,0,0,1,Vol
+112,5,Benítez, Marcos,Barracas Ctral.,8,2,0,0,0,0,Vol
+113,5,López, Lucas,Barracas Ctral.,2,0,0,0,0,0,Vol
+114,5,Puig, Maximiliano,Barracas Ctral.,4,0,0,0,0,0,Vol
+115,5,Juárez, Alex,Barracas Ctral.,1,0,0,0,0,0,Vol
+116,5,Sepúlveda, Bruno,Barracas Ctral.,10,1,3,0,0,1,Del
+117,5,Centurión, Ricardo,Barracas Ctral.,9,0,0,0,0,0,Del
+118,5,Colitto, Lucas,Barracas Ctral.,8,1,0,0,0,0,Del
+119,5,Cantero, Alan,Barracas Ctral.,9,1,0,0,0,0,Del
+120,5,Domínguez, Alexis,Barracas Ctral.,6,0,0,0,0,0,Del
+121,5,Viollaz, Julián,Barracas Ctral.,2,0,0,0,0,0,Del
+122,5,Brondo, Manuel,Barracas Ctral.,1,0,0,0,0,0,Del
+123,6,Losada, Nahuel,Belgrano,10,0,0,1,0,0,Arq
+124,6,Vicentini, Manuel,Belgrano,2,0,0,0,0,0,Arq
+125,6,Diarte, Lucas,Belgrano,11,4,1,0,0,0,Def
+126,6,Barinaga, Juan ,Belgrano,5,1,0,0,0,0,Def
+127,6,Compagnucci, Gabriel,Belgrano,9,1,0,0,0,0,Def
+128,6,Godoy, Érik,Belgrano,8,1,0,0,0,0,Def
+129,6,Ibacache, Alex,Belgrano,3,0,0,0,0,0,Def
+130,6,Meriano, Nicolás,Belgrano,8,2,0,0,0,0,Def
+131,6,Rébola, Alejandro,Belgrano,10,1,0,1,0,0,Def
+132,6,Oliver, Francisco,Belgrano,4,0,0,0,0,0,Def
+133,6,Novaretti, Diego,Belgrano,2,0,0,0,0,0,Def
+134,6,Sánchez, Ulises,Belgrano,11,0,2,0,0,0,Vol
+135,6,García, Matías,Belgrano,8,2,1,0,0,0,Vol
+136,6,Rojas, Ariel,Belgrano,11,2,0,0,0,0,Vol
+137,6,Longo, Santiago,Belgrano,11,0,0,0,0,0,Vol
+138,6,Pereira, Guillermo,Belgrano,4,0,0,0,0,0,Vol
+139,6,Ramírez, Iván,Belgrano,3,1,0,0,0,0,Vol
+140,6,Tomasetti, Gerónimo,Belgrano,4,0,0,0,0,0,Vol
+141,6,Miño, Mariano,Belgrano,1,0,0,0,0,0,Vol
+142,6,Vegetti, Pablo,Belgrano,11,1,3,0,0,2,Del
+143,6,Zapelli, Bruno,Belgrano,10,0,1,0,0,0,Del
+144,6,Jara, Franco,Belgrano,6,0,0,0,0,0,Del
+145,6,Ortigoza, Iván,Belgrano,5,0,0,0,0,0,Del
+146,6,Susvielles, Joaquín,Belgrano,5,0,0,0,0,0,Del
+147,6,Amaya, Andrés,Belgrano,1,0,0,0,0,0,Del
+148,6,Hesar, Ibrahim,Belgrano,5,0,0,0,0,0,Del
+149,6,Bordagaray, Fabián,Belgrano,4,1,0,0,0,0,Del
+150,6,Barrea, Daniel,Belgrano,4,0,0,0,0,0,Del
+151,7,Romero, Sergio,Boca,10,1,0,0,0,0,Arq
+152,7,García, Javier,Boca,1,0,0,0,0,0,Arq
+153,7,Figal, Nicolás,Boca,11,3,2,1,0,0,Def
+154,7,Fabra, Frank,Boca,8,2,0,0,0,0,Def
+155,7,Valdez, Bruno,Boca,10,3,0,0,0,0,Def
+156,7,Advíncula, Luis,Boca,9,2,0,0,0,0,Def
+157,7,Roncaglia, Facundo,Boca,4,1,0,0,0,0,Def
+158,7,Sández, Agustín,Boca,5,2,0,0,0,0,Def
+159,7,Valentini, Nicolás,Boca,2,1,0,0,0,0,Def
+160,7,Weigandt, Marcelo,Boca,2,1,0,0,0,0,Def
+161,7,Fernández, Guillermo,Boca,10,3,1,0,1,0,Vol
+162,7,Romero, Óscar,Boca,10,2,2,0,0,0,Vol
+163,7,Payero, Martín,Boca,4,1,1,0,0,0,Vol
+164,7,Varela, Alan,Boca,10,3,0,0,0,0,Vol
+165,7,Fernández, Ezequiel,Boca,9,0,0,1,1,0,Vol
+166,7,Medina, Cristian,Boca,7,0,0,0,0,0,Vol
+167,7,Ramírez, Juan,Boca,8,0,0,0,0,0,Vol
+168,7,Langoni, Luca,Boca,10,0,3,0,0,0,Del
+169,7,Briasco, Norberto,Boca,7,0,1,0,0,0,Del
+170,7,Merentiel, Miguel,Boca,10,1,2,0,0,0,Del
+171,7,Villa, Sebastián,Boca,10,1,0,1,0,0,Del
+172,7,Benedetto, Darío,Boca,5,0,0,0,0,0,Del
+173,7,Orsini, Nicolás,Boca,4,0,0,0,0,0,Del
+174,7,Zeballos, Exequiel,Boca,3,0,0,0,0,0,Del
+175,7,Morales, Gonzalo,Boca,1,0,0,0,0,0,Del
+176,7,Vázquez, Luis,Boca,2,0,0,0,0,0,Del
+177,9,Chicco, Ignacio,Colón,11,0,0,0,0,0,Arq
+178,9,Teuten, Andrew,Colón,7,2,1,0,0,0,Def
+179,9,Delgado, Rafael,Colón,6,2,0,0,0,0,Def
+180,9,Goltz, Paolo,Colón,11,1,0,0,0,0,Def
+181,9,Garcés, Facundo,Colón,11,1,0,0,0,0,Def
+182,9,Meza, Eric,Colón,9,0,0,0,0,0,Def
+183,9,Nardelli, Gian,Colón,6,0,0,1,0,0,Def
+184,9,Schott, Augusto,Colón,3,0,0,0,0,0,Def
+185,9,Acevedo, Lucas,Colón,2,0,0,0,0,0,Def
+186,9,Perlaza, Baldomero,Colón,8,3,1,0,0,0,Vol
+187,9,Pierotti, Santiago,Colón,11,4,2,0,0,0,Vol
+188,9,Ibáñez, Joaquín,Colón,7,2,1,0,0,0,Vol
+189,9,Arrúa, Carlos,Colón,9,2,0,0,0,0,Vol
+190,9,Chicco, Julián,Colón,10,3,0,0,0,0,Vol
+191,9,Álvarez, Juan Pablo,Colón,9,0,0,0,0,0,Vol
+192,9,Galván, Tomás,Colón,5,0,0,0,0,0,Vol
+193,9,Moreyra, Stéfano,Colón,6,3,0,0,0,0,Vol
+194,9,Picco, Leonel,Colón,4,0,0,0,0,0,Vol
+195,9,Vega, Cristian,Colón,3,1,0,0,0,0,Vol
+196,9,Ábila, Ramón,Colón,10,3,3,0,0,0,Del
+197,9,Benítez, Jorge,Colón,7,3,2,0,0,0,Del
+198,9,Neris, José Pablo,Colón,7,0,0,0,0,0,Del
+199,9,Troncoso, Laureano,Colón,3,1,0,0,0,0,Del
+200,9,Taborda, Facundo,Colón,2,0,0,0,0,0,Del
+201,8,Ledesma, Marcos,Ctral. Córdoba,11,0,0,0,0,0,Arq
+202,8,Benítez, Marcelo,Ctral. Córdoba,7,0,1,0,0,0,Def
+203,8,Pereyra, Fabio,Ctral. Córdoba,11,3,0,0,0,0,Def
+204,8,Blasi, Brian,Ctral. Córdoba,10,1,0,0,0,0,Def
+205,8,Canto, Gustavo,Ctral. Córdoba,11,1,0,0,0,0,Def
+206,8,Goñi, Gonzalo,Ctral. Córdoba,7,0,0,0,0,0,Def
+207,8,Navas, Julián,Ctral. Córdoba,5,1,0,0,0,0,Def
+208,8,Maciel, Leandro,Ctral. Córdoba,8,0,2,0,0,0,Vol
+209,8,Pittón, Mauro,Ctral. Córdoba,11,0,0,0,0,0,Vol
+210,8,Farioli, Brian,Ctral. Córdoba,11,2,1,0,0,0,Vol
+211,8,Soraire, Jesús,Ctral. Córdoba,10,0,1,0,0,0,Vol
+212,8,Jourdan, Federico,Ctral. Córdoba,5,0,0,0,0,0,Vol
+213,8,Kalinski, Enzo,Ctral. Córdoba,4,1,0,0,0,0,Vol
+214,8,Ciccolini, Leandro,Ctral. Córdoba,3,0,0,0,0,0,Vol
+215,8,Gamba, Lucas,Ctral. Córdoba,10,0,1,0,0,0,Del
+216,8,Torres, Gonzalo,Ctral. Córdoba,10,1,1,0,0,0,Del
+217,8,Rius, Ciro,Ctral. Córdoba,11,2,1,0,0,0,Del
+218,8,Besozzi, Lucas,Ctral. Córdoba,8,1,0,0,0,0,Del
+219,8,Castelli, Facundo,Ctral. Córdoba,10,1,0,0,0,0,Del
+220,8,Rodríguez, Luis Miguel,Ctral. Córdoba,7,0,0,0,0,0,Del
+221,10,Unsain, Ezequiel,Def. y Justicia,11,0,0,0,0,0,Arq
+222,10,Cardona, Tomás,Def. y Justicia,10,6,1,0,0,0,Def
+223,10,Colombo, Nazareno,Def. y Justicia,9,2,0,0,0,0,Def
+224,10,Sant'anna, Agustín,Def. y Justicia,10,4,0,0,0,0,Def
+225,10,Soto, Alexis,Def. y Justicia,11,4,0,0,0,0,Def
+226,10,Tripichio, Nicolás,Def. y Justicia,5,0,0,0,0,0,Def
+227,10,Cáceres, Darío,Def. y Justicia,6,0,0,0,0,0,Def
+228,10,Malatini, Julián,Def. y Justicia,6,2,0,0,0,0,Def
+229,10,Ramos Mingo, Santiago,Def. y Justicia,5,0,0,1,0,0,Def
+230,10,Gutiérrez, Kevin,Def. y Justicia,10,1,1,1,0,0,Vol
+231,10,Barbona, David,Def. y Justicia,11,2,2,0,0,0,Vol
+232,10,López, Julián,Def. y Justicia,8,1,0,0,0,0,Vol
+233,10,Alanís, Gabriel,Def. y Justicia,7,0,0,0,0,0,Vol
+234,10,Castellani, Gonzalo,Def. y Justicia,7,0,0,0,0,0,Vol
+235,10,Bogarín, Rodrigo,Def. y Justicia,6,1,0,0,0,0,Vol
+236,10,Escalante, Tomás,Def. y Justicia,8,3,0,0,0,0,Vol
+237,10,Versaci, Federico,Def. y Justicia,1,0,0,0,0,0,Vol
+238,10,Benítez, Ángel,Def. y Justicia,4,3,0,0,0,0,Vol
+239,10,Solari, Santiago,Def. y Justicia,11,1,4,0,0,0,Del
+240,10,Fernández, Nicolás Emanuel,Def. y Justicia,11,2,3,0,0,3,Del
+241,10,Miritello, Juan,Def. y Justicia,6,2,1,0,0,0,Del
+242,10,Togni, Gastón,Def. y Justicia,5,0,0,0,0,0,Del
+243,10,Mosquera, Edwin,Def. y Justicia,4,1,0,0,0,0,Del
+244,10,Ríos, Andrés,Def. y Justicia,4,0,0,0,0,0,Del
+245,11,Andújar, Mariano,Estudiantes,10,2,0,0,0,0,Arq
+246,11,Sappa, Daniel,Estudiantes,1,0,0,0,0,0,Arq
+247,11,Godoy, Leonardo,Estudiantes,8,1,1,0,0,0,Def
+248,11,Lollo, Luciano,Estudiantes,8,1,1,0,0,0,Def
+249,11,Romero, Zaid,Estudiantes,9,1,1,0,1,0,Def
+250,11,Benedetti, Gastón,Estudiantes,2,0,0,0,0,0,Def
+251,11,Mancuso, Eros,Estudiantes,5,0,0,0,0,0,Def
+252,11,Mas, Emmanuel,Estudiantes,11,1,0,0,0,0,Def
+253,11,Núñez, Santiago,Estudiantes,4,3,0,0,0,0,Def
+254,11,Muñoz, Ezequiel,Estudiantes,4,0,0,0,0,0,Def
+255,11,Guasone, Juan Cruz,Estudiantes,2,1,0,0,0,0,Def
+256,11,Ascacíbar, Santiago,Estudiantes,11,2,3,0,0,0,Vol
+257,11,Rodríguez, Jorge,Estudiantes,11,2,1,0,0,0,Vol
+258,11,Godoy, Matías,Estudiantes,10,1,1,0,0,0,Vol
+259,11,Zapiola, Franco,Estudiantes,4,0,0,0,0,0,Vol
+260,11,Zuqui, Fernando,Estudiantes,9,3,0,0,0,0,Vol
+261,11,Sosa, José,Estudiantes,8,0,0,0,0,0,Vol
+262,11,Verón, Deian,Estudiantes,2,0,0,0,0,0,Vol
+263,11,Piñeiro, Gonzalo,Estudiantes,1,0,0,0,0,0,Vol
+264,11,Boselli, Mauro,Estudiantes,11,0,4,0,0,0,Del
+265,11,Rollheiser, Benjamín,Estudiantes,11,1,0,0,0,0,Del
+266,11,Pellegrino, Mateo,Estudiantes,5,0,0,0,0,0,Del
+267,11,Piatti, Pablo,Estudiantes,7,0,0,0,0,0,Del
+268,11,Carrillo, Guido,Estudiantes,7,0,0,0,0,0,Del
+269,11,Méndez, Mauro,Estudiantes,8,1,0,0,0,0,Del
+270,12,Durso, Tomás,Gimnasia L.P.,10,2,0,0,0,0,Arq
+271,12,Insfrán, Nelson,Gimnasia L.P.,1,0,0,0,0,0,Arq
+272,12,Enrique, Guillermo,Gimnasia L.P.,10,1,1,1,0,0,Def
+273,12,Morales, Leonardo,Gimnasia L.P.,11,1,1,0,0,0,Def
+274,12,Barros Schelotto, Bautista,Gimnasia L.P.,6,2,1,0,0,0,Def
+275,12,Melluso, Matías,Gimnasia L.P.,9,2,0,0,0,0,Def
+276,12,Sánchez, Felipe,Gimnasia L.P.,10,5,0,0,0,0,Def
+277,12,Bazzi, Matías,Gimnasia L.P.,1,0,0,0,0,0,Def
+278,12,Mastrángelo, Diego,Gimnasia L.P.,1,1,0,0,0,0,Def
+279,12,Fernández, Tomás,Gimnasia L.P.,1,0,0,0,0,0,Def
+280,12,Lescano, Alan,Gimnasia L.P.,6,0,1,0,0,0,Vol
+281,12,Sosa, Alan,Gimnasia L.P.,9,0,0,0,0,0,Vol
+282,12,Ramírez, Eric,Gimnasia L.P.,8,3,1,0,0,0,Vol
+283,12,Miramón, Ignacio,Gimnasia L.P.,9,4,0,1,0,0,Vol
+284,12,Muro, Tomás,Gimnasia L.P.,7,0,0,0,0,0,Vol
+285,12,Bolívar, Agustín,Gimnasia L.P.,5,0,0,0,0,0,Vol
+286,12,Colazo, Nicolás,Gimnasia L.P.,3,0,0,0,0,0,Vol
+287,12,Napolitano, Antonio,Gimnasia L.P.,6,0,0,0,0,0,Vol
+288,12,Steimbach, Alexis,Gimnasia L.P.,6,2,0,0,0,0,Vol
+289,12,Sánchez, Nicolás,Gimnasia L.P.,1,0,0,0,0,0,Vol
+290,12,Mamut, Leandro,Gimnasia L.P.,2,1,0,0,0,0,Vol
+291,12,Tarragona, Cristian,Gimnasia L.P.,9,2,1,0,0,1,Del
+292,12,Soldano, Franco,Gimnasia L.P.,7,0,1,0,0,0,Del
+293,12,Contín, Nicolás,Gimnasia L.P.,6,0,1,0,0,0,Del
+294,12,Domínguez, Benjamín,Gimnasia L.P.,7,0,0,0,0,0,Del
+295,12,Comba, Maximiliano,Gimnasia L.P.,9,2,0,0,0,0,Del
+296,12,Mammini, Ivo,Gimnasia L.P.,5,0,0,0,0,0,Del
+297,12,Castillo, Rodrigo,Gimnasia L.P.,4,0,0,0,0,0,Del
+298,12,Torres, Franco,Gimnasia L.P.,1,0,0,0,0,0,Del
+299,13,Rodríguez, Diego,Godoy Cruz,11,2,0,0,0,1,Arq
+300,13,Arce, Lucas,Godoy Cruz,11,1,0,0,0,0,Def
+301,13,Galdames, Thomas,Godoy Cruz,10,1,0,1,0,0,Def
+302,13,Barrios, Pier,Godoy Cruz,10,3,0,0,0,0,Def
+303,13,Ferrari, Gianluca,Godoy Cruz,3,0,0,0,0,0,Def
+304,13,Meli, Juan Andrés,Godoy Cruz,8,0,0,0,0,0,Def
+305,13,Rasmussen, Federico,Godoy Cruz,11,3,0,0,0,0,Def
+306,13,Salvareschi, Braian,Godoy Cruz,4,1,0,0,1,0,Def
+307,13,Mendoza, Mateo,Godoy Cruz,1,0,0,0,0,0,Def
+308,13,Abrego, Gonzalo,Godoy Cruz,11,1,2,0,0,0,Vol
+309,13,López Muñoz, Hernán,Godoy Cruz,6,2,1,0,0,0,Vol
+310,13,Fernández, Roberto Nicolás,Godoy Cruz,11,3,0,0,0,0,Vol
+311,13,Leyes, Bruno,Godoy Cruz,8,1,0,0,0,0,Vol
+312,13,Andrada, Juan,Godoy Cruz,7,0,0,1,0,0,Vol
+313,13,Eseiza, Julián,Godoy Cruz,3,1,0,0,0,0,Vol
+314,13,Núñez, Cristian,Godoy Cruz,6,1,0,0,0,0,Vol
+315,13,Allende, Tadeo,Godoy Cruz,10,2,1,0,0,0,Del
+316,13,Rodríguez, Salomón,Godoy Cruz,11,3,2,0,0,0,Del
+317,13,Conechny, Tomás,Godoy Cruz,9,0,1,0,0,0,Del
+318,13,Larrosa, Enzo,Godoy Cruz,6,0,1,0,0,0,Del
+319,13,Ulariaga, Nahuel,Godoy Cruz,5,0,1,0,0,0,Del
+320,13,Ramírez, Matías,Godoy Cruz,5,0,0,0,0,0,Del
+321,13,Cingolani, Luciano,Godoy Cruz,5,1,0,0,0,0,Del
+322,13,Pedernera, Gastón,Godoy Cruz,1,1,0,0,0,0,Del
+323,14,Chaves, Lucas,Huracán,9,3,0,0,0,0,Arq
+324,14,Campisi, Nicolás,Huracán,2,0,0,0,0,0,Arq
+325,14,Tobio, Fernando,Huracán,8,1,1,1,0,0,Def
+326,14,Soto, Guillermo,Huracán,9,0,0,0,1,0,Def
+327,14,Benítez, Guillermo,Huracán,9,1,0,0,0,0,Def
+328,14,Novillo, Joaquín,Huracán,6,0,0,0,0,0,Def
+329,14,Sauro, Gastón,Huracán,7,1,0,1,0,0,Def
+330,14,Pizarro, Patricio,Huracán,6,2,0,2,0,0,Def
+331,14,Carrizo, Lucas,Huracán,3,0,0,0,0,0,Def
+332,14,Ibáñez, César,Huracán,1,0,0,0,0,0,Def
+333,14,Torrent, Fernando,Huracán,3,0,0,0,0,0,Def
+334,14,Merolla, Lucas,Huracán,1,1,0,0,0,0,Def
+335,14,Hezze, Santiago,Huracán,11,2,1,0,0,0,Vol
+336,14,Gudiño, Gabriel,Huracán,7,3,3,0,0,0,Vol
+337,14,Acevedo, Jonás,Huracán,7,1,0,0,0,0,Vol
+338,14,Fattori, Federico,Huracán,10,0,0,0,0,0,Vol
+339,14,Castro, Lucas,Huracán,5,0,0,0,0,0,Vol
+340,14,Burgoa, Valentín,Huracán,5,1,0,0,0,0,Vol
+341,14,Godoy, Fernando,Huracán,3,0,0,0,0,0,Vol
+342,14,Spina, Agostino,Huracán,2,1,0,0,0,0,Vol
+343,14,Gómez, Matías,Huracán,4,0,0,0,0,0,Vol
+344,14,Luján, Santiago,Huracán,5,1,0,0,0,0,Vol
+345,14,Cordero, Nicolás,Huracán,10,2,4,0,0,0,Del
+346,14,Garro, Juan Fernando,Huracán,6,0,1,0,0,0,Del
+347,14,Gauto, Juan,Huracán,10,0,1,0,0,0,Del
+348,14,Cóccaro, Matías,Huracán,9,3,0,0,0,1,Del
+349,14,García, Juan Manuel,Huracán,10,2,1,0,0,0,Del
+350,14,Mazzantti, Walter,Huracán,2,0,0,0,0,0,Del
+351,15,Rey, Rodrigo,Independiente,11,0,0,0,0,0,Arq
+352,15,Barreto, Sergio,Independiente,9,3,0,1,0,0,Def
+353,15,Costa, Ayrton,Independiente,9,4,0,0,0,0,Def
+354,15,Elizalde, Edgar,Independiente,6,1,0,0,0,0,Def
+355,15,Gómez, Luciano,Independiente,5,0,0,0,0,0,Def
+356,15,Ostachuk, Patricio,Independiente,4,1,0,1,0,0,Def
+357,15,Pérez, Damián,Independiente,6,2,0,0,0,0,Def
+358,15,Salle, Santiago,Independiente,3,0,0,0,0,0,Def
+359,15,Laso, Joaquín,Independiente,6,1,0,1,0,0,Def
+360,15,Báez, Javier,Independiente,7,1,0,0,0,0,Def
+361,15,Quiroga, Agustín,Independiente,1,0,0,0,0,0,Def
+362,15,Barcia, Baltasar,Independiente,10,2,1,0,0,0,Vol
+363,15,Cazares, Juan,Independiente,8,0,0,0,0,0,Vol
+364,15,López, Kevin,Independiente,7,1,0,0,0,0,Vol
+365,15,Marcone, Iván,Independiente,10,1,0,1,0,0,Vol
+366,15,Mulet, Agustín,Independiente,7,1,0,0,0,0,Vol
+367,15,Ortiz, Sergio,Independiente,6,3,0,0,0,0,Vol
+368,15,Pozzo, Tomás,Independiente,5,1,0,0,0,0,Vol
+369,15,Sarrafiore, Martín,Independiente,5,1,0,0,0,0,Vol
+370,15,Cauteruccio, Martín,Independiente,11,0,1,0,0,3,Del
+371,15,Márquez, Rodrigo,Independiente,6,0,0,0,0,0,Del
+372,15,Giménez, Matías,Independiente,10,1,0,0,0,1,Del
+373,15,Cuero, Mauricio,Independiente,3,0,0,0,0,0,Del
+374,15,Vallejo, Nicolás,Independiente,9,1,0,1,0,0,Del
+375,15,Atencio, Rodrigo,Independiente,1,0,0,0,0,0,Del
+376,15,Hidalgo, Santiago,Independiente,6,1,0,0,0,0,Del
+377,15,Rambert, Tomás,Independiente,1,1,0,0,0,0,Del
+378,15,Martínez, Braian,Independiente,2,0,0,0,0,0,Del
+379,16,Carranza, Jorge,Instituto,11,1,0,0,0,0,Arq
+380,16,Varela Moreno, Joaquín,Instituto,2,0,1,0,0,0,Def
+381,16,Alarcón, Fernando,Instituto,11,2,0,0,0,0,Def
+382,16,Franco, Juan José,Instituto,1,0,0,0,0,0,Def
+383,16,Mosevich, Leonel,Instituto,10,3,0,0,0,0,Def
+384,16,Corda , Sebastián,Instituto,11,3,0,0,0,0,Def
+385,16,Bay, Jonathan ,Instituto,4,1,0,0,0,0,Def
+386,16,Cerato, Giuliano,Instituto,11,3,0,0,0,0,Def
+387,16,Garrido, Oscar,Instituto,6,0,0,0,0,0,Def
+388,16,Parnisari, Ezequiel,Instituto,1,0,0,1,0,0,Def
+389,16,Graciani, Gabriel,Instituto,11,0,2,0,0,0,Vol
+390,16,Bochi, Roberto,Instituto,7,3,1,0,0,0,Vol
+391,16,Linares, Nicolás,Instituto,10,2,1,0,0,0,Vol
+392,16,Lodico, Gastón,Instituto,11,0,0,0,0,1,Vol
+393,16,Cuello, Brahian,Instituto,10,0,0,0,0,0,Vol
+394,16,Watson, Franco,Instituto,9,0,0,0,0,0,Vol
+395,16,Watson, Nicolás,Instituto,4,1,0,0,0,0,Vol
+396,16,Dellarossa, Jonathan,Instituto,1,0,0,0,0,0,Vol
+397,16,Martínez, Adrián,Instituto,10,5,4,0,0,0,Del
+398,16,Rodríguez, Santiago,Instituto,11,0,2,0,0,0,Del
+399,16,Albertengo, Lucas,Instituto,8,1,0,0,0,0,Del
+400,16,Rodríguez, Axel,Instituto,4,2,0,0,0,0,Del
+401,16,Rodríguez, Gregorio,Instituto,5,0,0,0,0,0,Del
+402,17,Acosta, Lucas,Lanús,9,0,0,0,0,0,Arq
+403,17,Morales, Lautaro,Lanús,2,0,0,1,0,0,Arq
+404,17,Braghieri, Diego,Lanús,1,0,1,0,0,0,Def
+405,17,Canale, José María,Lanús,11,2,1,0,0,0,Def
+406,17,Lema, Cristian,Lanús,9,2,0,2,0,0,Def
+407,17,Aguirre, Braian,Lanús,9,2,0,0,0,0,Def
+408,17,Di Plácido, Leonel,Lanús,2,0,0,0,0,0,Def
+409,17,Sánchez Miño, Juan,Lanús,5,2,0,0,0,0,Def
+410,17,Aguilar, Felipe,Lanús,4,0,0,0,0,0,Def
+411,17,Aude, Julián,Lanús,2,0,0,0,0,0,Def
+412,17,Aguilar, Brian,Lanús,2,0,0,0,0,0,Def
+413,17,De la Vega, Pedro,Lanús,11,3,2,0,0,0,Vol
+414,17,Esquivel, Matías,Lanús,10,0,1,0,0,0,Vol
+415,17,Loaiza, Raúl,Lanús,8,1,1,0,0,0,Vol
+416,17,Boggio, Luciano,Lanús,10,1,0,1,0,0,Vol
+417,17,Belmonte, Tomás,Lanús,10,5,0,0,0,0,Vol
+418,17,Fernández, Julián,Lanús,9,1,0,0,0,0,Vol
+419,17,Pérez, Facundo,Lanús,4,0,0,0,0,0,Vol
+420,17,González, Maximiliano,Lanús,1,0,0,0,0,0,Vol
+421,17,Díaz, Leandro,Lanús,9,2,2,1,0,2,Del
+422,17,Orozco, Franco,Lanús,7,0,2,0,0,0,Del
+423,17,Troyansky, Franco,Lanús,10,0,2,0,0,0,Del
+424,17,Acosta, Lautaro,Lanús,10,1,0,0,0,0,Del
+425,17,Blando, Brian,Lanús,4,0,0,0,0,0,Del
+426,17,Sand, José,Lanús,2,0,0,0,0,1,Del
+427,17,Sanabria, Mateo,Lanús,1,0,0,0,0,0,Del
+428,18,Hoyos, Lucas,Newell's,11,1,0,0,0,0,Arq
+429,18,Velázquez, Víctor,Newell's,7,0,2,0,0,0,Def
+430,18,Mansilla, Facundo,Newell's,8,0,1,0,0,0,Def
+431,18,Mosquera, Jherson,Newell's,9,3,1,0,0,0,Def
+432,18,Pittón, Bruno,Newell's,11,2,1,0,0,0,Def
+433,18,Ditta, Willer,Newell's,10,0,0,1,0,0,Def
+434,18,Méndez, Armando,Newell's,2,0,0,0,0,0,Def
+435,18,Ortiz, Guillermo,Newell's,1,1,0,0,0,0,Def
+436,18,Sforza, Juan,Newell's,10,3,1,0,0,0,Vol
+437,18,Ferreira, Cristian,Newell's,8,2,0,0,0,0,Vol
+438,18,Gómez, Iván,Newell's,11,1,0,0,0,0,Vol
+439,18,Montenegro, Lisandro,Newell's,5,0,0,0,0,0,Vol
+440,18,Portillo, Marcos,Newell's,3,0,0,0,0,0,Vol
+441,18,Pérez, Pablo,Newell's,9,2,0,0,0,0,Vol
+442,18,Balzi, Guillermo,Newell's,1,0,0,0,0,0,Vol
+443,18,Esponda, Marcelo,Newell's,1,0,0,0,0,0,Vol
+444,18,González, Francisco,Newell's,2,0,1,0,0,0,Del
+445,18,Recalde, Jorge,Newell's,9,1,2,0,0,0,Del
+446,18,Sordo, Ramiro,Newell's,11,2,1,0,0,0,Del
+447,18,Pérez Tica, Jeremías,Newell's,3,0,0,0,0,0,Del
+448,18,Aguirre, Brian,Newell's,9,2,0,0,0,0,Del
+449,18,Menéndez, Jonathan,Newell's,5,0,0,0,0,0,Del
+450,18,Reasco, Djorkaeff,Newell's,8,0,0,0,0,0,Del
+451,18,Funez, Nazareno,Newell's,1,0,0,0,0,0,Del
+452,18,Rossi, Genaro,Newell's,1,0,0,0,0,0,Del
+453,18,Giani, Justo,Newell's,1,0,0,0,0,0,Del
+454,18,Sartori, Fabrizio,Newell's,1,0,0,0,0,0,Del
+455,19,Macagno, Ramiro,Platense,6,0,0,0,0,0,Arq
+456,19,Arce, Ignacio,Platense,5,0,0,0,0,0,Arq
+457,19,Morgantini, Nicolás,Platense,8,1,1,0,0,0,Def
+458,19,Suso, Gastón,Platense,9,5,1,0,0,0,Def
+459,19,Marcich, Sasha,Platense,7,1,0,0,0,0,Def
+460,19,Pellegrino, Marco,Platense,4,2,0,0,0,0,Def
+461,19,Vázquez, Ignacio,Platense,8,1,0,0,0,0,Def
+462,19,Jacquet, Miguel,Platense,4,0,0,1,0,0,Def
+463,19,Valdivia, Gonzalo,Platense,3,0,0,0,0,0,Def
+464,19,Asís, Gonzalo,Platense,4,0,0,0,0,0,Def
+465,19,Infante, Juan José,Platense,5,1,0,0,0,0,Def
+466,19,Pignani, Juan Pablo,Platense,5,0,0,0,0,0,Def
+467,19,Baldassarra, Franco,Platense,10,2,1,0,0,0,Vol
+468,19,Zalazar, Maximiliano,Platense,8,1,1,0,0,0,Vol
+469,19,Díaz, Franco,Platense,9,3,0,0,0,0,Vol
+470,19,Cacciabue, Jerónimo,Platense,7,2,0,0,0,0,Vol
+471,19,Rossi, Iván,Platense,5,1,0,0,0,0,Vol
+472,19,Sabella, Alexis,Platense,2,0,0,0,0,0,Vol
+473,19,Schor, Ignacio,Platense,4,0,0,0,0,0,Vol
+474,19,Taborda, Vicente,Platense,11,2,0,0,0,1,Del
+475,19,Servetto, Nicolás,Platense,11,1,4,0,0,0,Del
+476,19,Castro, Nicolás,Platense,11,4,3,0,0,0,Del
+477,19,Martínez, Ronaldo,Platense,8,2,1,0,0,0,Del
+478,19,Quiroga, Mauro,Platense,9,0,0,0,0,1,Del
+479,19,Alonso, Agustín,Platense,6,0,0,0,0,0,Del
+480,19,Zeineddín, Nadir,Platense,3,0,0,0,0,0,Del
+481,20,Arias, Gabriel,Racing,11,0,0,0,0,0,Arq
+482,20,Piovi, Gonzalo,Racing,7,1,2,0,0,0,Def
+483,20,Mura, Facundo,Racing,8,1,1,0,0,0,Def
+484,20,Insúa, Emiliano,Racing,7,2,0,0,0,0,Def
+485,20,Rojas, Gabriel,Racing,7,1,0,1,0,0,Def
+486,20,Galván, Jonatan,Racing,5,1,0,0,0,0,Def
+487,20,Opazo, Oscar,Racing,5,2,0,0,0,0,Def
+488,20,Pillud, Iván,Racing,3,1,0,0,0,0,Def
+489,20,Sigali, Leonardo,Racing,8,2,0,0,0,0,Def
+490,20,Rojas, Matías,Racing,10,2,4,0,0,1,Vol
+491,20,Gómez, Jonatan,Racing,11,2,1,0,0,0,Vol
+492,20,Nardoni, Juan,Racing,11,1,0,0,0,0,Vol
+493,20,Moreno, Aníbal,Racing,8,1,0,0,0,0,Vol
+494,20,Avilés, Tomás,Racing,5,1,0,0,0,0,Vol
+495,20,Moralez, Maximiliano,Racing,7,2,0,0,0,0,Vol
+496,20,Oroz, Nicolás,Racing,8,0,0,0,0,0,Vol
+497,20,Cardona, Edwin,Racing,3,1,0,0,0,0,Vol
+498,20,Guerrero, Paolo,Racing,9,2,1,0,0,0,Del
+499,20,Romero, Maximiliano,Racing,11,0,2,0,0,0,Del
+500,20,Hauche, Gabriel,Racing,10,2,2,0,0,0,Del
+501,20,Carbonero, Johan,Racing,7,3,0,0,0,0,Del
+502,20,Reniero, Nicolás,Racing,8,2,0,0,0,0,Del
+503,20,Fértoli, Héctor,Racing,3,0,0,0,0,0,Del
+504,20,Fernández, Román,Racing,1,0,0,0,0,0,Del
+505,20,Cáceres, Juan,Racing,7,1,0,1,0,0,Def
+506,21,Armani, Franco,River,11,2,0,0,0,0,Arq
+507,21,González Pirez, Leandro,River,8,2,1,0,0,0,Def
+508,21,Díaz, Enzo,River,10,4,0,0,0,0,Def
+509,21,Casco, Milton,River,11,2,0,0,0,0,Def
+510,21,Díaz, Paulo,River,6,1,0,0,0,0,Def
+511,21,Rojas, Robert,River,5,0,0,0,0,0,Def
+512,21,Maidana, Jonatan,River,4,0,0,0,0,0,Def
+513,21,Mammana, Emanuel,River,1,0,0,0,0,0,Def
+514,21,Herrera, Andrés,River,4,1,0,0,0,0,Def
+515,21,Fernández, Ignacio,River,11,2,3,0,0,0,Vol
+516,21,Palavecino, Agustín,River,9,0,1,0,0,0,Vol
+517,21,Paradela, José,River,11,2,2,0,0,0,Vol
+518,21,Barco, Esequiel,River,11,1,0,0,0,3,Vol
+519,21,Aliendro, Rodrigo,River,9,1,1,0,0,0,Vol
+520,21,Pérez, Enzo,River,11,4,0,0,0,0,Vol
+521,21,De La Cruz, Nicolás,River,4,0,0,0,0,0,Vol
+522,21,Simón, Santiago,River,3,0,0,0,0,0,Vol
+523,21,Alfonso, Franco,River,3,0,0,0,0,0,Vol
+524,21,Zuculini, Bruno,River,1,0,0,0,0,0,Vol
+525,21,Rondón, Salomón,River,10,1,1,0,0,1,Del
+526,21,Beltrán, Lucas,River,10,0,2,0,0,3,Del
+527,21,Solari, Pablo,River,7,2,1,0,0,0,Del
+528,21,Suárez, Matías,River,3,0,1,0,0,0,Del
+529,21,Borja, Miguel,River,9,0,0,0,0,1,Del
+530,22,Servio, Gaspar,Rosario Ctral.,4,0,0,0,0,0,Arq
+531,22,Broun, Jorge,Rosario Ctral.,7,1,0,0,0,0,Arq
+532,22,Komar, Juan Cruz,Rosario Ctral.,9,0,1,0,0,0,Def
+533,22,Mallo, Facundo,Rosario Ctral.,11,3,1,0,0,0,Def
+534,22,Quintana, Carlos,Rosario Ctral.,10,3,0,0,0,0,Def
+535,22,Martínez, Damián,Rosario Ctral.,11,3,1,0,0,0,Def
+536,22,Rodríguez, Alan,Rosario Ctral.,10,1,0,1,0,0,Def
+537,22,Rodríguez, Lucas,Rosario Ctral.,4,0,0,0,0,0,Def
+538,22,Cortez, Ismael,Rosario Ctral.,3,0,0,0,0,0,Def
+539,22,Silva, Kevin,Rosario Ctral.,1,0,0,0,0,0,Def
+540,22,Malcorra, Ignacio,Rosario Ctral.,11,0,1,0,0,1,Vol
+541,22,Infantino, Gino,Rosario Ctral.,9,1,1,0,0,0,Vol
+542,22,Campaz, Jaminton,Rosario Ctral.,8,1,1,0,0,0,Vol
+543,22,Giaccone, Lautaro,Rosario Ctral.,5,0,1,0,0,0,Vol
+544,22,Mac Allister, Francis,Rosario Ctral.,5,2,1,0,0,0,Vol
+545,22,Ortiz, Kevin,Rosario Ctral.,10,4,0,1,0,0,Vol
+546,22,Montoya, Walter,Rosario Ctral.,9,2,0,0,0,0,Vol
+547,22,Lo Celso, Francesco,Rosario Ctral.,3,0,0,0,0,0,Vol
+548,22,Toledo, Agustín,Rosario Ctral.,3,1,0,0,0,0,Vol
+549,22,Ferreyra, Luciano,Rosario Ctral.,1,0,0,0,0,0,Vol
+550,22,Veliz, Alejo,Rosario Ctral.,10,1,4,0,0,0,Del
+551,22,Candia, Jhonatan,Rosario Ctral.,5,0,1,0,0,0,Del
+552,22,Bianchi, Octavio,Rosario Ctral.,5,0,0,0,0,0,Del
+553,22,Martínez Dupuy, Luca,Rosario Ctral.,5,1,0,0,0,0,Del
+554,22,Oviedo, Fabricio,Rosario Ctral.,2,0,0,0,0,0,Del
+555,23,Batalla, Augusto,San Lorenzo,9,2,0,0,0,0,Arq
+556,23,Altamirano, Facundo,San Lorenzo,2,0,0,0,0,0,Arq
+557,23,Gattoni, Federico,San Lorenzo,9,2,1,0,0,0,Def
+558,23,Hernández, Gastón,San Lorenzo,10,0,1,1,0,0,Def
+559,23,Pérez, Rafael,San Lorenzo,11,3,0,0,0,0,Def
+560,23,Campi, Gastón,San Lorenzo,3,0,0,0,0,0,Def
+561,23,Luján, Gonzalo,San Lorenzo,10,0,0,0,0,0,Def
+562,23,Leguizamón, Iván,San Lorenzo,11,0,2,0,0,0,Vol
+563,23,Barrios, Nahuel,San Lorenzo,10,1,1,1,0,0,Vol
+564,23,Elías, Jalil,San Lorenzo,11,1,1,0,0,0,Vol
+565,23,Martegani, Agustín,San Lorenzo,6,0,0,0,0,0,Vol
+566,23,Sánchez, Carlos,San Lorenzo,10,1,0,0,0,0,Vol
+567,23,Irala, Elián,San Lorenzo,6,0,0,0,0,0,Vol
+568,23,Perruzzi, Francisco,San Lorenzo,2,0,0,0,0,0,Vol
+569,23,Giay, Agustín,San Lorenzo,4,2,0,1,0,0,Vol
+570,23,Maroni, Gonzalo,San Lorenzo,2,0,0,0,0,0,Vol
+571,23,Bareiro, Adam,San Lorenzo,10,2,1,0,0,2,Del
+572,23,Braida, Malcom,San Lorenzo,11,3,0,0,0,0,Del
+573,23,Vombergar, Andrés,San Lorenzo,10,2,3,0,0,0,Del
+574,23,Blandi, Nicolás,San Lorenzo,6,2,1,0,0,0,Del
+575,23,Cerutti, Ezequiel,San Lorenzo,10,1,0,0,0,0,Del
+576,23,Hernández, Matías,San Lorenzo,1,0,0,0,0,0,Del
+577,23,Peralta Bauer, Mariano,San Lorenzo,1,0,0,0,0,0,Del
+578,24,Meza, Sebastián,Sarmiento,11,3,0,0,0,0,Arq
+579,24,Bettini, Gonzalo,Sarmiento,11,1,0,0,0,0,Def
+580,24,Donatti, Alejandro,Sarmiento,7,0,0,0,0,0,Def
+581,24,Sbuttoni, Franco,Sarmiento,4,0,0,0,0,0,Def
+582,24,Díaz, Gabriel,Sarmiento,8,0,0,0,0,0,Def
+583,24,Hernández, Emanuel,Sarmiento,3,0,0,0,0,0,Def
+584,24,Insaurralde, Juan Manuel,Sarmiento,10,3,0,1,0,0,Def
+585,24,Quinteros, Franco,Sarmiento,2,1,0,0,0,0,Def
+586,24,Rosso, Jean Pierre,Sarmiento,5,0,0,0,0,0,Def
+587,24,Cougo, Ayrton,Sarmiento,2,1,0,0,0,0,Def
+588,24,Morales, Santiago,Sarmiento,1,0,0,0,0,0,Def
+589,24,Mónaco, Manuel,Sarmiento,7,2,1,0,0,0,Vol
+590,24,Méndez, Emiliano,Sarmiento,11,2,0,0,0,0,Vol
+591,24,Arismendi, Yair,Sarmiento,2,0,0,0,0,0,Vol
+592,24,Gallardo, David,Sarmiento,5,0,0,0,0,0,Vol
+593,24,García, Manuel,Sarmiento,8,3,0,0,0,0,Vol
+594,24,Martínez, Fernando,Sarmiento,10,3,0,0,0,0,Vol
+595,24,Quiroga, Sergio,Sarmiento,10,3,0,0,0,0,Vol
+596,24,Mauri, José,Sarmiento,2,0,0,0,0,0,Vol
+597,24,Femia, Nicolás,Sarmiento,2,0,0,0,0,0,Vol
+598,24,Mancilla, Harrinson,Sarmiento,5,2,0,0,0,0,Vol
+599,24,López, Lisandro,Sarmiento,11,4,2,0,0,0,Del
+600,24,Gondou, Luciano,Sarmiento,11,1,2,0,0,2,Del
+601,24,Toledo, Javier,Sarmiento,11,2,1,0,0,1,Del
+602,24,Melano, Lucas,Sarmiento,8,1,3,0,0,0,Del
+603,24,Kaprof, Juan,Sarmiento,4,0,0,0,0,0,Del
+604,24,Gerzel, Gastón,Sarmiento,1,0,0,0,0,0,Del
+605,25,Herrera, Guido,Talleres,11,1,0,0,0,0,Arq
+606,25,Catalán, Matías,Talleres,10,0,1,0,0,0,Def
+607,25,Portillo, Juan Carlos,Talleres,7,1,1,1,0,0,Def
+608,25,Benavídez, Gastón,Talleres,11,2,0,0,0,0,Def
+609,25,Pasquini, Nicolás,Talleres,3,1,0,0,0,0,Def
+610,25,Rodríguez, Juan Gabriel,Talleres,8,3,0,0,0,0,Def
+611,25,Suárez, Lucas,Talleres,4,0,0,0,0,0,Def
+612,25,Buffarini, Julio,Talleres,3,1,0,0,0,0,Def
+613,25,Fernández, Vicente,Talleres,2,0,0,0,0,0,Def
+614,25,Sosa, Ramón,Talleres,9,0,3,0,0,0,Vol
+615,25,Garro, Rodrigo,Talleres,11,1,2,0,0,0,Vol
+616,25,Villagra, Rodrigo,Talleres,11,2,0,0,0,0,Vol
+617,25,Franco, Alan,Talleres,10,2,0,0,0,0,Vol
+618,25,Oliva, Christian,Talleres,7,1,0,0,0,0,Vol
+619,25,Ortegoza, Ulises,Talleres,2,0,0,0,0,0,Vol
+620,25,Sequeira, Luis,Talleres,2,0,0,0,0,0,Vol
+621,25,Álvarez, Favio,Talleres,3,0,0,0,0,0,Vol
+622,25,Álvez, Gonzalo,Talleres,2,0,0,0,0,0,Vol
+623,25,Santos, Michael,Talleres,11,3,5,0,0,0,Del
+624,25,Bustos, Nahuel,Talleres,6,1,3,0,0,0,Del
+625,25,Pizzini, Francisco,Talleres,11,1,3,0,1,0,Del
+626,25,Romero, David,Talleres,4,0,1,0,0,0,Del
+627,25,Valoyes, Diego,Talleres,9,1,0,0,0,0,Del
+628,25,Barrera, Diego,Talleres,4,0,0,0,0,0,Del
+629,25,Depietri, Valentín,Talleres,6,0,0,0,0,0,Del
+630,25,Zalazar, David,Talleres,1,0,0,0,0,0,Del
+631,25,Martino, Ángelo,Talleres,4,0,0,1,1,0,Def
+632,26,Marinelli, Gonzalo,Tigre,11,1,0,0,0,0,Arq
+633,26,Leizza, Brian,Tigre,6,2,1,0,0,0,Def
+634,26,Garay, Martín,Tigre,5,0,0,0,0,0,Def
+635,26,Luciatti, Abel,Tigre,9,1,0,1,0,0,Def
+636,26,Ortega, Martín,Tigre,4,1,0,0,0,0,Def
+637,26,Prieto, Sebastián,Tigre,8,0,0,0,0,0,Def
+638,26,Blondel, Lucas,Tigre,10,2,0,0,0,0,Def
+639,26,Aguilera, Emanuel,Tigre,6,1,0,0,0,0,Def
+640,26,Montoya, Lautaro,Tigre,3,0,0,1,0,0,Def
+641,26,Cabrera, Víctor,Tigre,4,1,0,0,0,0,Def
+642,26,Castro, Alexis,Tigre,11,0,1,0,0,0,Vol
+643,26,Prediger, Sebastián,Tigre,9,0,0,0,0,0,Vol
+644,26,Cardozo, Agustín,Tigre,8,0,0,0,0,0,Vol
+645,26,Medina, Sebastián,Tigre,5,0,0,0,0,0,Vol
+646,26,Menossi, Lucas,Tigre,11,2,0,0,0,0,Vol
+647,26,Molinas, Aaron,Tigre,10,3,0,0,0,0,Vol
+648,26,Zabala, Cristian,Tigre,10,1,0,0,0,0,Vol
+649,26,Retegui, Mateo,Tigre,11,4,7,0,0,1,Del
+650,26,Colidio, Facundo,Tigre,11,0,1,0,0,0,Del
+651,26,Armoa, Blas,Tigre,10,1,1,0,0,0,Del
+652,26,Badaloni, Tomás,Tigre,6,1,0,0,0,0,Del
+653,26,Flores, Gonzalo,Tigre,3,0,0,0,0,0,Del
+654,26,Obando, Agustín,Tigre,1,1,0,0,0,0,Del
+655,26,Protti, Ijiel,Tigre,1,1,0,0,0,0,Del
+656,27,Mele, Santiago,Unión,9,0,0,0,0,0,Arq
+657,27,Moyano, Sebastián,Unión,2,0,0,0,0,0,Arq
+658,27,Piris, Oscar,Unión,6,2,1,0,0,0,Def
+659,27,Calderón, Franco,Unión,8,1,0,1,0,0,Def
+660,27,Esquivel, Lucas,Unión,9,1,0,0,0,0,Def
+661,27,Corvalán, Claudio,Unión,10,4,0,0,0,0,Def
+662,27,Vera, Federico,Unión,9,3,0,0,0,0,Def
+663,27,Gerometta, Francisco,Unión,7,1,0,0,0,0,Def
+664,27,Ludueña, Juan Pablo,Unión,3,0,0,0,0,0,Def
+665,27,Machuca, Imanol,Unión,9,1,2,1,0,0,Vol
+666,27,Aued, Luciano,Unión,11,2,1,0,0,0,Vol
+667,27,Gordillo, Yeison,Unión,9,4,1,1,0,0,Vol
+668,27,Cañete, Ezequiel,Unión,7,1,0,0,0,0,Vol
+669,27,Mosqueira, Joaquín,Unión,2,0,0,0,0,0,Vol
+670,27,Roldán, Enzo,Unión,8,2,0,0,0,0,Vol
+671,27,Zenón, Kevin,Unión,10,0,0,0,0,0,Vol
+672,27,Del Blanco, Mateo,Unión,1,0,0,0,0,0,Vol
+673,27,Castrillón, Bryan,Unión,4,1,0,0,0,0,Vol
+674,27,Comas, Gastón,Unión,1,0,0,0,0,0,Vol
+675,27,González, Tomás,Unión,3,0,1,0,0,0,Del
+676,27,Luna Diale, Mauro,Unión,9,1,1,1,0,0,Del
+677,27,Marabel, Junior,Unión,10,0,0,0,0,0,Del
+678,27,Vecino, Thiago,Unión,9,1,0,0,0,0,Del
+679,27,Dómina, Jerónimo,Unión,9,1,0,0,0,0,Del
+680,27,Juárez, Daniel,Unión,10,0,0,0,0,0,Del
+681,28,Burián, Leonardo,Vélez,11,0,0,0,0,0,Arq
+682,28,Ortega, Francisco,Vélez,10,0,0,1,0,0,Def
+683,28,Brizuela, Miguel,Vélez,10,2,0,0,0,0,Def
+684,28,Godín, Diego,Vélez,6,1,0,0,1,0,Def
+685,28,Giannetti, Lautaro,Vélez,5,2,0,0,0,0,Def
+686,28,Guidara, Tomás,Vélez,9,1,0,0,0,0,Def
+687,28,Jara, Leonardo,Vélez,6,0,0,0,0,0,Def
+688,28,Gómez, Valentín,Vélez,4,2,0,0,0,0,Def
+689,28,Fernández, Damián,Vélez,2,0,0,0,0,0,Def
+690,28,Florentín, José,Vélez,10,2,1,1,0,0,Vol
+691,28,Cabrera, Elías,Vélez,8,0,0,0,0,0,Vol
+692,28,Ordoñez, Christian,Vélez,7,1,0,0,0,0,Vol
+693,28,Seoane, Mateo,Vélez,7,0,0,0,0,0,Vol
+694,28,Garayalde, Nicolás,Vélez,4,2,0,0,0,0,Vol
+695,28,Méndez, Juan Ignacio,Vélez,6,1,0,0,0,0,Vol
+696,28,Bou, Walter,Vélez,9,0,2,0,0,0,Del
+697,28,Janson, Lucas,Vélez,9,0,3,0,0,1,Del
+698,28,Fernández, Julián,Vélez,10,0,2,0,0,0,Del
+699,28,Osorio, Abiel,Vélez,11,2,2,0,0,0,Del
+700,28,Pratto, Lucas,Vélez,11,3,1,0,0,1,Del
+701,28,Prestianni, Gianluca,Vélez,7,2,1,0,0,0,Del
+702,28,Castro, Santiago,Vélez,7,0,0,0,0,0,Del
+703,28,Lobato, Lenny,Vélez,5,0,0,0,0,0,Del
