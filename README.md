@@ -5,13 +5,14 @@ Este proyecto **busca explorar y aprender SQL**,  mediante la ejecución de cons
 
 ---
 
-## 🛠 Tecnologías usadas
+## Objetivos
+Los datos utilizados en este repositorio **no corresponden a un caso real de trabajo**, sino que provienen de bases de datos descargadas de diferentes fuentes, cursos y charlas.
 
-- **Python 3.x**  
-- **pandas** – Para manejar DataFrames  
-- **pandasql** – Para ejecutar queries SQL sobre DataFrames
-- **mysql** –
-- y otras librerias
+El objetivo principal es **practicar y comprender el uso de queries en SQL**, para:
+- Familiarizarme con la lógica de consulta
+- Entender cómo trabajar con distintos tipos de datos
+- Ganar experiencia que luego pueda aplicar en un contexto laboral real
+
 ---
 
 ## 🔹 Funcionalidades
