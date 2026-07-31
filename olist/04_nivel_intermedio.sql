@@ -917,16 +917,423 @@ HAVING SUM(op.payment_value) = (
 );
 
 -- ###################################################################
--- Mostrar el vendedor con más ventas por estado.
+-- Mostrar el cliente  con más compras por estado.
+SELECT * FROM customers; -- customer_id
+SELECT * FROM orders; -- customer_id
+
+SELECT c.customer_unique_id, c.customer_state, COUNT(o.order_id) AS numero_compras 
+FROM customers c
+JOIN orders o
+ON c.customer_id = o.customer_id
+GROUP BY c.customer_state, c.customer_unique_id
+HAVING COUNT(o.order_id) = (
+    SELECT MAX(cantidad) AS maximo FROM (
+       SELECT COUNT(o2.order_id) AS cantidad
+       FROM customers c2
+       JOIN orders o2
+       ON c2.customer_id = o2.customer_id
+        WHERE c.customer_state = c2.customer_state
+       GROUP BY c2.customer_state, c2.customer_unique_id
+    ) as t
+   
+);
+-- Misma consulta pero con CTE (WITH)
+--  CTE (por sus siglas en inglés, Common Table Expression o Expresión de Tabla Común) 
+-- es un conjunto de resultados temporal con nombre que se define dentro de una consulta SQL usando la palabra clave WITH. 
+-- Funciona como una tabla virtual que solo existe mientras dura la consulta principal
+
+-- Paso 1. Crear una tabla temporal con las compras por cliente
+WITH ventas AS (
+    SELECT c.customer_state, c.customer_unique_id, COUNT(o.order_id) AS numero_compras
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+    GROUP BY c.customer_state, c.customer_unique_id),
+-- Paso 2. Buscar el máximo por estado
+maximos AS (
+    SELECT customer_state, MAX(numero_compras) AS max_compras
+    FROM ventas
+    GROUP BY customer_state
+)
+-- Paso 3 Unir las dos tablas
+SELECT v.customer_state, v.customer_unique_id, v.numero_compras
+FROM ventas v
+JOIN maximos m
+    ON v.customer_state = m.customer_state
+   AND v.numero_compras = m.max_compras
+ORDER BY
+    v.customer_state;
+
+
 -- ###################################################################
 -- Mostrar el pedido con mayor cantidad de productos de cada cliente.
+SELECT * FROM customers; -- customer_id, customer_unique_id
+SELCECT * FROM order_items; -- product_id, order_id
+SELECT * FORM orders; -- order_id, customer_id,
+
+-- cuantos productos tiene cada pedido
+WITH productos_por_pedido AS (
+    SELECT oi.order_id, o.customer_id, c.customer_unique_id ,COUNT(oi.product_id) AS cantidad_productos
+    FROM order_items oi
+    JOIN orders o
+    ON oi.order_id = o.order_id
+    JOIN customers c
+    ON o.customer_id = c.customer_id
+    GROUP BY oi.order_id, o.customer_id,c.customer_unique_id
+),
+-- Paso 2. Cual es la mayor cantidad de productos que tuvo algún pedido de cada cliente?
+maximo_cliente AS (
+    SELECT customer_unique_id , MAX(cantidad_productos) AS valor_maximo
+    FROM productos_por_pedido
+    GROUP BY customer_unique_id
+)
+-- Paso 3. Unir ambas tablas
+SELECT pp.order_id, pp.customer_unique_id, pp.cantidad_productos
+FROM productos_por_pedido pp
+JOIN maximo_cliente mx
+ON pp.customer_unique_id = mx.customer_unique_id AND
+pp.cantidad_productos = mx.valor_maximo
+
+-- con row number
+-- Mostrar el pedido con mayor cantidad de productos de cada cliente.
+SELECT * FROM customers; -- customer_id, customer_unique_id
+SELCECT * FROM order_items; -- product_id, order_id
+SELECT * FORM orders; -- order_id, customer_id,
+
+
+-- cantidad de productos ==> agrupar por pedido ==> cuantos productos tiene cada pedido
+-- Agrupar productos por pedido por cliente ==> cual es pedido que tiene mas productos por cliente
+-- Mostrar 1 Pedido
+-- Tabla final order_id, cantidad_productos, customer_unique_id
+WITH cantidad_productos_pedido AS (
+    SELECT o.order_id, c.customer_unique_id, COUNT(oi.product_id) AS cantidad_productos
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+    JOIN order_items oi
+    ON o.order_id = oi.order_id
+    GROUP BY o.order_id, c.customer_unique_id ),
+
+ranking_pedidos AS (
+    SELECT order_id, customer_unique_id, cantidad_productos, 
+        ROW_NUMBER() OVER(
+            PARTITION BY customer_unique_id
+            ORDER BY cantidad_productos DESC
+        ) AS fila
+
+    FROM cantidad_productos_pedido
+)
+
+SELECT order_id, customer_unique_id, cantidad_productos 
+FROM ranking_pedidos
+WHERE fila = 1;
+
+
+
+
 -- ###################################################################
 -- Mostrar la review más alta de cada vendedor.
+
+-- WITH nombre_cte AS (
+--     ...
+-- ),
+-- otro_cte AS (
+--     ...
+-- )
+-- SELECT ...
+-- FROM ...;
+
+-- con row number
+-- WITH tabla_ordenada AS (
+--     SELECT
+--         columnas_que_necesito,
+--         ROW_NUMBER() OVER(
+--             PARTITION BY columna_grupo
+--             ORDER BY columna_criterio ASC/DESC
+--         ) AS fila
+
+--     FROM tablas
+--     JOIN otras_tablas
+-- )
+
+-- SELECT *
+-- FROM tabla_ordenada
+-- WHERE fila = 1;
+
+
+SELECT * from  order_reviews; -- review_id, order_id
+SELECT * FROM order_items;  -- order_id, seller_id
+
+-- Agrupar las reviews por vendedor
+WITH review_por_vendedor AS (
+    SELECT rv.order_id,   oi.seller_id, rv.review_score
+    FROM order_reviews rv
+    JOIN order_items oi
+    ON rv.order_id = oi.order_id
+),
+--  Tomar la review mas alta por vendedor
+review_mas_alta_vendedor AS (
+    SELECT seller_id, MAX(review_score) as review_maxima 
+    FROM review_por_vendedor
+    GROUP BY seller_id
+)
+SELECT rpv.seller_id, rpv.order_id,  rmav.review_maxima 
+FROM review_por_vendedor rpv
+JOIN review_mas_alta_vendedor rmav
+ON rpv.seller_id = rmav.seller_id AND 
+rpv.review_score = rmav.review_maxima
+
+-- hacemos la logica pero con row number: Mostrar la review más alta de cada vendedor.
+
+SELECT * from  order_reviews; -- review_id, order_id, review_score
+SELECT * FROM order_items;  -- order_id, seller_id
+
+
+WITH review_por_vendedor_ordenada AS (
+    SELECT
+        rv.review_id, oi.order_id, oi.seller_id, rv.review_score,
+        ROW_NUMBER() OVER(
+            PARTITION BY oi.seller_id
+            ORDER BY rv.review_score DESC
+        ) AS fila
+
+    FROM order_reviews rv
+    JOIN order_items oi
+    ON rv.order_id = oi.order_id
+)
+
+SELECT review_id, order_id, seller_id,review_score
+FROM review_por_vendedor_ordenada
+WHERE fila = 1;
+
+
 -- ###################################################################
 -- Mostrar el primer pedido de cada cliente (sin ROW_NUMBER).
+SELECT * FROM orders; -- order_id, customer_id, order_purchase_timestamp
+SELECT * FROM customers; -- customer_id, customer_unique_id
+-- Para cada cliente, ¿cuál es la menor fecha (MIN) de pedido?
+
+-- 1 Agrupar pedidos por cliente en orders
+-- 1b unir con customers id para ver el unique id
+-- 2do ver cual es la  fecha min por cliente (agrupar por clientes)
+-- 3er unir ambas tablas
+
+
+WITH pedidos_por_cliente AS (
+    SELECT c.customer_unique_id, o.order_id,  o.order_purchase_timestamp AS fecha
+    FROM orders o
+    JOIN customers c
+    ON o.customer_id = c.customer_id
+),
+primer_pedido AS (
+    SELECT customer_unique_id, MIN(fecha) fecha_mas_vieja
+    FROM pedidos_por_cliente
+    GROUP BY customer_unique_id
+)
+SELECT ppc.customer_unique_id, ppc.order_id, ppc.fecha
+FROM pedidos_por_cliente ppc
+JOIN primer_pedido pp
+ON ppc.customer_unique_id = pp.customer_unique_id
+AND ppc.fecha = pp.fecha_mas_vieja
+
+-- Ejemplo con row_number
+WITH pedidos AS (
+    SELECT c.customer_unique_id, o.order_id, o.order_purchase_timestamp AS fecha,
+        ROW_NUMBER() OVER(PARTITION BY c.customer_unique_id
+            ORDER BY o.order_purchase_timestamp ASC
+        ) AS rn
+    FROM orders o
+    JOIN customers c
+        ON o.customer_id = c.customer_id)
+
+SELECT
+    customer_unique_id, order_id, fecha
+FROM pedidos
+WHERE rn = 1;
+
 -- ###################################################################
 -- Mostrar el último pedido de cada cliente.
+SELECT * FROM customers;  -- customer_id, customer_unique_id
+SELECT * FROM orders; -- order_id, customer_id, order_purchase_timestamp ==> MAX/1ero ASC
+
+
+-- con row number
+WITH tabla_ordenada AS (
+    SELECT
+        c.customer_unique_id, o.order_id, o.order_purchase_timestamp,
+        ROW_NUMBER() OVER(
+            PARTITION BY c.customer_unique_id
+            ORDER BY o.order_purchase_timestamp ASC
+        ) AS fila
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+)
+
+SELECT customer_unique_id, order_id, order_purchase_timestamp
+FROM tabla_ordenada
+WHERE fila = 1;
+
+-- Otra forma con CTE
+-- Mostrar el último pedido de cada cliente.
+SELECT * FROM customers;  -- customer_id, customer_unique_id
+SELECT * FROM orders; -- order_id, customer_id, order_purchase_timestamp ==> MAX/1ero ASC
+
+-- 1ero uno las dos tablas
+-- 2do busco la fecha max por pedido, agrupado por cliente
+-- 3ero uno las dos fechas
+WITH pedidos AS (
+   SELECT c.customer_unique_id, o.order_id,  (o.order_purchase_timestamp) AS fecha
+   FROM customers c 
+   JOIN orders o
+   ON c.customer_id = o.customer_id
+),
+fecha_pedidos_por_clientes AS (
+    SELECT customer_unique_id, MAX (fecha) AS fecha_mas_nueva
+    FROM pedidos
+    GROUP BY customer_unique_id
+)
+SELECT  p.customer_unique_id, p.order_id, p.fecha
+FROM pedidos p
+JOIN fecha_pedidos_por_clientes f
+ON p.customer_unique_id = f.customer_unique_id AND
+p.fecha = f.fecha_mas_nueva
+
+"""
+Comentario
+Si un cliente tiene dos pedidos exactamente en la misma fecha/hora, MAX() devuelve ambos
+mientras que ROW_NUMBER() devolvería uno solo.
+"""
+
 -- ###################################################################
 -- Mostrar el producto más vendido de cada categoría.
+SELECT * FROM products; -- product_id, product_category_name
+SELECT * FROM order_items; -- product_id, order_id
+
+-- Unir tablas y contar los productos por categorias mas vendidos
+-- Agrupar por categorias,  tomar el MAX
+-- Unir ambas tablas
+
+WITH cantidad_productos_categorias AS (
+    SELECT  p.product_category_name, p.product_id, COUNT(oi.product_id) AS cantidad
+    FROM products p
+    JOIN order_items oi
+    ON p.product_id = oi.product_id
+    GROUP BY p.product_category_name, p.product_id
+),
+producto_mas_vendido AS (
+    SELECT product_category_name,  MAX(cantidad) AS cantidad_max
+    FROM cantidad_productos_categorias
+    GROUP BY product_category_name
+)
+SELECT pv.product_category_name, cp.product_id, cp.cantidad
+FROM cantidad_productos_categorias cp
+JOIN producto_mas_vendido pv
+ON cp.product_category_name = pv.product_category_name AND
+cp.cantidad = pv.cantidad_max
+
+-- Mostrar el producto más vendido de cada categoría.
+SELECT * FROM products; -- product_id, product_category_name
+SELECT * FROM order_items; -- product_id, order_id
+
+-- Unir tablas y contar los productos por categorias mas vendidos
+-- Agrupar por categorias,  tomar el MAX
+-- Unir ambas tablas
+-- con row number
+WITH producto_mas_vendido AS (
+    SELECT
+        p.product_category_name, p.product_id, COUNT(p.product_id) AS cantidad,
+        ROW_NUMBER() OVER(
+            PARTITION BY p.product_category_name
+            ORDER BY COUNT(p.product_id) DESC
+        ) AS fila
+
+    FROM products p
+    JOIN order_items oi
+    ON p.product_id = oi.product_id
+    GROUP BY p.product_category_name, p.product_id
+)
+
+SELECT product_category_name, product_id, cantidad
+FROM producto_mas_vendido
+WHERE fila = 1;
+
+-- Otra alternativa es algo mas "clara" pero tambien con row_number
+WITH ventas_productos AS (
+    SELECT
+        p.product_category_name, p.product_id, COUNT(p.product_id) AS cantidad
+    FROM products p
+    JOIN order_items oi
+    ON p.product_id = oi.product_id
+    GROUP BY p.product_category_name, p.product_id
+),
+ranking_productos AS (
+    SELECT *,
+        ROW_NUMBER() OVER(
+            PARTITION BY product_category_name
+            ORDER BY cantidad DESC
+        ) AS fila
+
+    FROM ventas_productos
+
+)
+SELECT product_category_name, product_id, cantidad
+FROM ranking_productos
+WHERE fila = 1;
+
 -- ###################################################################
 -- Mostrar la ciudad con mayor gasto dentro de cada estado.
+
+SELECT * FROM customers; -- customer_id, customer_state, customer_city
+SELECT * FROM orders; -- customer_id, order_id
+SELECT * FROM order_payments; -- order_id, payment_value
+
+-- 1 Unir tablas
+-- 2do buscar el gasto mas alto agrupado por estado
+-- 3erp unir las tablas
+
+
+WITH gastos_estado AS (
+    SELECT c.customer_state, c.customer_city,  SUM(op.payment_value) suma_gastos_ciudad
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+    JOIN order_payments op
+    ON o.order_id = op.order_id
+    GROUP BY c.customer_city, c.customer_state
+),
+maximo AS (
+    SELECT customer_state, MAX(suma_gastos_ciudad) AS valor_maximo
+    FROM gastos_estado
+    GROUP BY customer_state
+)
+SELECT ge.customer_state, ge.customer_city, ge.suma_gastos_ciudad
+FROM gastos_estado ge
+JOIN maximo mx
+ON ge.customer_state = mx.customer_state AND 
+ge.suma_gastos_ciudad = mx.valor_maximo
+
+-- con row number
+WITH gastos_ciudad AS (
+    -- Paso 1: calcular cuanto gasta cada ciudad
+    SELECT c.customer_state, c.customer_city, SUM(op.payment_value) AS suma_gastos_ciudad
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+    JOIN order_payments op
+    ON o.order_id = op.order_id
+
+    GROUP BY c.customer_state, c.customer_city),
+-- Paso 2: ordenar ciudades dentro de cada estado
+ranking_ciudades AS (   
+    SELECT *,
+        ROW_NUMBER() OVER(
+            PARTITION BY customer_state
+            ORDER BY suma_gastos_ciudad DESC
+        ) AS fila
+    FROM gastos_ciudad
+)
+-- Paso 3: quedarnos con la ciudad número 1 de cada estado
+SELECT customer_state, customer_city, suma_gastos_ciudad
+FROM ranking_ciudades
+WHERE fila = 1;
