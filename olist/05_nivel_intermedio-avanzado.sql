@@ -1,13 +1,72 @@
 -- Consultas de SQL nivel intermedio-avanzado
 
--- ---------------------------------------------------------------------------------------
--- Subconsultas (8 ejercicios)
 
 -- ###################################################################
 -- Mostrar los pedidos cuyo monto total sea mayor que el promedio de todos los pedidos.
+SELECT * FROM order_payments; -- order_id, payment_value
+
+-- Sumar el pyment value para todos los pedidos agrupando por medido
+-- Calcular el promedio de todos los pedidos
+-- Mostrar aquellos pedidos que superan el promedio
+
+-- Paso 1. Crear una tabla temporal con los pedidos
+WITH pedidos AS (
+    SELECT order_id, SUM(payment_value) AS suma_pedido
+    FROM order_payments 
+    GROUP BY order_id),
+-- Paso 2. Buscar el promedio de todos los pedidos
+promedio AS (
+    SELECT AVG(suma_pedido) AS promedio_pedido
+    FROM pedidos
+
+)
+-- Paso 3 Unir las dos tablas
+SELECT
+    pd.order_id, pd.suma_pedido
+FROM pedidos pd
+CROSS JOIN promedio p
+WHERE pd.suma_pedido > p.promedio_pedido;
+
+-- ---------------------------------------
+-- otra forma con subcontulas
+WITH pedidos AS (
+    SELECT order_id, SUM(payment_value) AS suma_pedido
+    FROM order_payments
+    GROUP BY order_id
+),
+
+SELECT
+    order_id, suma_pedido
+FROM pedidos
+WHERE suma_pedido > (
+    SELECT AVG(suma_pedido)
+    FROM pedidos
+);
+
 
 -- ###################################################################
 -- Mostrar los clientes que realizaron más pedidos que el promedio de pedidos por cliente.
+
+SELECT * FROM customers; -- customer_id, customer_unique_id
+SELECT * FROM orders; -- customer_id, order_id
+
+-- Contar cuantos pedidos por clientes hay
+-- Calcular el promedio de pedidos por clientes
+-- Mostrar clientes que hicieron mas pedidos que el promedio
+WITH pedidos_por_cliente AS (
+    SELECT c.customer_id, c.customer_unique_id, COUNT(o.order_id) AS cantidad_pedidos_clientes
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+    GROUP BY c.customer_id,c.customer_unique_id
+)
+SELECT customer_id, cantidad_pedidos_clientes
+FROM pedidos_por_cliente
+WHERE cantidad_pedidos_clientes > (
+    SELECT AVG(cantidad_pedidos_clientes)
+    FROM pedidos_por_cliente
+);
+
 
 -- ###################################################################
 -- Mostrar las categorías cuyo precio promedio sea mayor que el precio promedio de todas las categorías.
