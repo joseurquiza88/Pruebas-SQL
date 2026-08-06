@@ -93,7 +93,31 @@ WHERE promedio_categoria > (
 
 
 -- ###################################################################
--- ¿Cuántos clientes realizaron más compras que el promedio? (Acá aparece una subconsulta en el FROM.)
+-- ¿Cuántos clientes realizaron más compras que el promedio? 
+
+SELECT * FROM customers; -- customer_id, customer_unique_id
+SELECT * FROM orders; -- customer_id, order_id
+
+-- Compras por cliente
+-- Promedio de compras general
+-- Unir las tablas y ver los clientes que realizaron mas compras que el promedio
+-- Contar cuantos clientes
+
+WITH compras_clientes AS (
+    SELECT c.customer_id, c.customer_unique_id, COUNT(o.order_id) cant_compras_clientes
+    FROM customers c
+    JOIN orders o
+    ON  c.customer_id = o.customer_id
+    GROUP BY c.customer_id,c.customer_unique_id
+)
+SELECT COUNT(*) AS cantidad_clientes
+FROM compras_clientes
+WHERE cant_compras_clientes > (
+    SELECT AVG(cant_compras_clientes)
+    FROM compras_clientes
+);
+
+
 
 -- ###################################################################
 -- Mostrar los vendedores cuyo ingreso total sea superior al ingreso promedio de todos los vendedores.
