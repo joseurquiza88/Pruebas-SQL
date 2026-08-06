@@ -67,9 +67,30 @@ WHERE cantidad_pedidos_clientes > (
     FROM pedidos_por_cliente
 );
 
-
 -- ###################################################################
 -- Mostrar las categorías cuyo precio promedio sea mayor que el precio promedio de todas las categorías.
+SELECT * FROM products; -- product_id, product_category_name
+SELECT * FROM order_items; -- product_id, price
+
+-- Tabla solo con los precios por categoria
+-- Calcular el promedio de todas las categorias
+-- Unir tablas y ver cual de las categorias muestra un precio mayor que el precio promedio
+
+WITH categorias_productos AS (
+    SELECT p.product_category_name, AVG(oi.price) AS promedio_categoria
+    FROM products p
+    JOIN order_items oi
+    ON  p.product_id = oi.product_id
+    GROUP BY p.product_category_name
+)
+SELECT product_category_name, promedio_categoria
+FROM categorias_productos
+WHERE promedio_categoria > (
+    SELECT AVG(promedio_categoria)
+    FROM categorias_productos
+);
+
+
 
 -- ###################################################################
 -- ¿Cuántos clientes realizaron más compras que el promedio? (Acá aparece una subconsulta en el FROM.)
