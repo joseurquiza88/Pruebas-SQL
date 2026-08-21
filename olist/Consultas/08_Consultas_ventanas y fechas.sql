@@ -256,25 +256,76 @@ ORDER BY fecha;
 
 
 -- ----------------------------------------------------------------
--- 14. Calcular las ventas acumuladas de cada cliente a lo largo del tiempo.
+-- 14. Para cada cliente, mostrar cuánto lleva gastado en total hasta cada
+-- uno de sus pedidos, siguiendo el orden de compra en el tiempo.
+-- Ventas acumuladas → importa el orden.
+WITH ventas_por_pedido AS (
+    SELECT
+        o.order_id, c.customer_unique_id, o.order_purchase_timestamp, SUM(oi.price) AS venta_pedido
+    FROM orders o
+    JOIN customers c
+    ON o.customer_id = c.customer_id
+    JOIN order_items oi
+    ON o.order_id = oi.order_id
+    GROUP BY o.order_id, c.customer_unique_id, o.order_purchase_timestamp
+)
+SELECT
+    customer_unique_id, order_id, order_purchase_timestamp, venta_pedido,
+    SUM(venta_pedido) OVER (
+        PARTITION BY customer_unique_id
+        ORDER BY order_purchase_timestamp
+    ) AS venta_acumulada
+
+FROM ventas_por_pedido;
 
 
 
 
 -- ----------------------------------------------------------------
 -- 15. Mostrar cada venta junto con el promedio de ventas del cliente.
-
+-- No importa el orden pero tengo un grupo
+SELECT c.customer_unique_id, oi.price,
+ROUND(AVG (oi.price) OVER (
+    PARTITION BY c.customer_unique_id
+),2) AS promedio_venta_cliente
+FROM orders o
+JOIN customers c
+ON o.customer_id = c.customer_id
+JOIN order_items oi
+ON o.order_id = oi.order_id
 
 
 
 -- ----------------------------------------------------------------
--- 16. Calcular el promedio de las últimas 3 ventas:
+-- 16. Para cada cliente, mostrar cada una de sus ventas junto con el promedio de esa venta y las 2 ventas anteriores,
+ -- ordenadas por fecha.
+
 
 
 
 -- ----------------------------------------------------------------
 -- 17. Calcular el promedio mensual de ventas y compararlo con el promedio general.
+WITH datos AS (
+    SELECT
+        DATE_TRUNC('month', o.order_purchase_timestamp) AS mes,
+        oi.price
+    FROM orders o
+    JOIN order_items oi
+        ON o.order_id = oi.order_id
+),
 
+promedio_general AS (
+    SELECT AVG(price) AS promedio_general
+    FROM datos
+)
+
+SELECT
+    d.mes,
+    AVG(d.price) AS promedio_mensual,
+    pg.promedio_general
+FROM datos d
+CROSS JOIN promedio_general pg
+GROUP BY d.mes, pg.promedio_general;
 
 
 -- ----------------------------------------------------------------
@@ -284,7 +335,6 @@ ORDER BY fecha;
 
 -- ----------------------------------------------------------------
 -- 19. Ventas mensuales + mes anterior
-
 
 
 
