@@ -501,10 +501,121 @@ FROM ventas
 
 
 -- ----------------------------------------------------------------
--- 
+-- 24. Primera compra de cada cliente
+-- Para cada cliente, mostrar todos sus pedidos junto con el número de pedido que representa dentro de su historial de compras. 
+-- Ordenarlos cronológicamente.
 
 
 
 
 -- ----------------------------------------------------------------
--- 
+-- 25. Clientes con su segunda compra
+-- Obtener únicamente aquellos clientes que realizaron al menos dos pedidos y mostrar su segundo pedido, 
+-- junto con la fecha en que lo realizaron.
+
+
+
+
+-- ----------------------------------------------------------------
+-- 26. Vendedores con la misma posición
+-- Para cada estado, obtener los vendedores ordenados según sus ventas totales. 
+-- Mostrar todos los vendedores y su posición dentro del estado. Los vendedores con la misma cantidad de ventas deben 
+-- compartir posición.
+
+
+-- ----------------------------------------------------------------
+-- 27. Top 3 vendedores, exactamente 3 por estado
+-- Para cada estado, obtener exactamente los 3 vendedores con mayores ventas. 
+-- En caso de empate, igualmente deben aparecer exactamente 3 vendedores.
+
+
+
+-- ----------------------------------------------------------------
+-- 28. Diferencia entre pedidos
+-- Para cada cliente, mostrar cada pedido junto con la cantidad de días transcurridos desde su pedido anterior.
+
+
+
+
+-- ----------------------------------------------------------------
+-- 29. Tiempo hasta la próxima compra
+-- Para cada cliente, mostrar cada pedido junto con la cantidad de días que faltaron hasta su siguiente pedido. 
+-- Excluir el último pedido de cada cliente.
+
+
+
+
+-- ----------------------------------------------------------------
+-- 30. Detectar clientes que aumentaron su compra
+-- Para cada cliente, mostrar cada compra, la compra anterior y una columna que indique
+-- si la compra actual fue mayor, menor o igual que la anterior.
+
+
+
+
+-- ----------------------------------------------------------------
+-- 31. Porcentaje acumulado de ventas
+-- Ordenar las ventas mensuales cronológicamente y mostrar para cada mes el total vendido 
+-- y qué porcentaje representan las ventas acumuladas hasta ese momento respecto del total de ventas del período.
+
+
+
+-- ----------------------------------------------------------------
+-- 32. Porcentaje acumulado dentro de cada cliente
+-- Para cada cliente, mostrar sus pedidos ordenados cronológicamente,
+-- el monto de cada pedido y el porcentaje que representa el gasto acumulado hasta ese pedido respecto del gasto total del cliente.
+
+
+
+
+-- ----------------------------------------------------------------
+-- 33. Ventas acumuladas por estado
+-- Para cada estado, mostrar las ventas de cada mes y las ventas acumuladas desde el primer mes registrado para ese estado.
+
+
+
+
+-- ----------------------------------------------------------------
+-- 34. Clientes por encima del promedio
+-- Para cada cliente, calcular el total gastado y compararlo con el promedio
+--  de gasto de todos los clientes. Mostrar solamente los clientes cuyo gasto total esté por encima del promedio.
+
+
+
+
+-- ----------------------------------------------------------------
+-- 35. Compra por encima del promedio del cliente
+-- Para cada cliente, mostrar sus pedidos, el valor de cada pedido y el promedio de sus pedidos. 
+-- Indicar si el pedido estuvo por encima o por debajo del promedio del cliente.
+
+
+
+-- ----------------------------------------------------------------
+-- 36. Para cada cliente, mostrar su pedido más reciente.
+
+-- ----------------------------------------------------------------
+-- 37. Para cada cliente, mostrar su segundo pedido.
+
+-- ----------------------------------------------------------------
+-- 38. Para cada cliente, mostrar la diferencia de días entre cada compra y la anterior.
+
+-- ----------------------------------------------------------------
+-- 39. Para cada estado, mostrar el vendedor que ocupa el segundo puesto en ventas.
+
+-- ----------------------------------------------------------------
+-- 40. Para cada estado, mostrar los vendedores que están dentro de los tres primeros puestos, permitiendo empates.
+
+-- ----------------------------------------------------------------
+-- 41. Para cada cliente, mostrar cuánto lleva gastado acumulado después de cada pedido.
+
+-- ----------------------------------------------------------------
+-- 42. Para cada mes, indicar si las ventas aumentaron o disminuyeron respecto al mes anterior.
+
+-- ----------------------------------------------------------------
+-- 43. Para cada cliente, mostrar su compra y el promedio de sus compras.
+
+-- ----------------------------------------------------------------
+-- 44. Para cada mes, mostrar qué porcentaje de las ventas acumuladas representa sobre el total del período.
+
+-- ----------------------------------------------------------------
+-- 45. Para cada cliente, encontrar el pedido inmediatamente anterior al pedido más reciente.
