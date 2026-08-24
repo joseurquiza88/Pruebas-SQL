@@ -661,42 +661,125 @@ FROM compras
 -- ESTA MAL!!! REVISAR!!
 
 WITH ventas_mensuales AS (
-SELECT DATE_TRUNC('month', o.order_purchase_timestamp) AS mes, SUM(op.payment_value) AS total_mensual,
-SUM (op.payment_value) OVER (
-    ORDER BY DATE_TRUNC('month', o.order_purchase_timestamp)
-) AS total_acumulado
-FROM orders o
-JOIN order_payments op
-ON o.order_id = op.order_id
+    SELECT 
+        DATE_TRUNC('month', o.order_purchase_timestamp) AS mes,
+        SUM(op.payment_value) AS total_mensual
+    FROM orders o
+    JOIN order_payments op
+        ON o.order_id = op.order_id
+    GROUP BY DATE_TRUNC('month', o.order_purchase_timestamp)
+),
 
-GROUP BY DATE_TRUNC('month', o.order_purchase_timestamp)
--- ORDER BY DATE_TRUNC('month', o.order_purchase_timestamp)
+ventas_acumuladas AS (
+    SELECT
+        mes,
+        total_mensual,
+        SUM(total_mensual) OVER (
+            ORDER BY mes
+        ) AS total_acumulado
+    FROM ventas_mensuales
 )
 
-SELECT order_id, mes, total_mensual, total_acumulado, 
-((total_acumulado / total_mensual )* 100)  AS porcentaje_venta_total
-FROM ventas_mensuales
+SELECT
+    mes,
+    total_mensual,
+    total_acumulado,
+    (total_mensual / total_acumulado) * 100.0 AS porcentaje_venta_total
+FROM ventas_acumuladas
+ORDER BY mes;
 -- ----------------------------------------------------------------
 -- 32. Porcentaje acumulado dentro de cada cliente
 -- Para cada cliente, mostrar sus pedidos ordenados cronológicamente,
 -- el monto de cada pedido y el porcentaje que representa el gasto acumulado hasta ese pedido respecto del gasto total del cliente.
 
+WITH gastos_clientes AS (
+SELECT c.customer_unique_id, o.order_id, op.payment_value, o.order_purchase_timestamp AS fecha,
+SUM (op.payment_value) OVER (
+    PARTITION BY c.customer_unique_id
+    ORDER BY o.order_purchase_timestamp
+    -- ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+)  AS gasto_acumulado
+FROM customers c
 
+JOIN orders o
+ON c.customer_id = o.customer_id
 
+JOIN order_payments op
+ON o.order_id = op.order_id
+ORDER BY o.order_purchase_timestamp
+),
+gastos_totales AS (
+SELECT customer_unique_id, order_id, payment_value, fecha, gasto_acumulado,
+SUM(payment_value) OVER (
+    PARTITION BY customer_unique_id
+) AS gasto_total
+FROM gastos_clientes
+)
+SELECT customer_unique_id, order_id, payment_value, fecha, gasto_acumulado, gasto_total,
+ (gasto_acumulado / NULLIF(gasto_total,0)) * 100 AS porcentaje_acumulado
+FROM gastos_totales
+ORDER BY customer_unique_id, fecha;
 
 -- ----------------------------------------------------------------
 -- 33. Ventas acumuladas por estado
 -- Para cada estado, mostrar las ventas de cada mes y las ventas acumuladas desde el primer mes registrado para ese estado.
+WITH ventas_mensuales AS (
+    SELECT 
+        s.seller_state,
+        DATE_TRUNC('month', o.order_purchase_timestamp) AS mes,
+        SUM(op.payment_value) AS ventas_mensuales
 
+    FROM sellers s
 
+    JOIN order_items oi
+        ON s.seller_id = oi.seller_id
 
+    JOIN orders o
+        ON oi.order_id = o.order_id
+
+    JOIN order_payments op
+        ON o.order_id = op.order_id
+
+    GROUP BY 
+        s.seller_state,
+        DATE_TRUNC('month', o.order_purchase_timestamp)
+)
+
+SELECT 
+    seller_state,
+    mes,
+    ventas_mensuales,
+
+    SUM(ventas_mensuales) OVER (
+        PARTITION BY seller_state
+        ORDER BY mes
+    ) AS ventas_acumuladas
+FROM ventas_mensuales
+ORDER BY seller_state, mes;
+;
 
 -- ----------------------------------------------------------------
 -- 34. Clientes por encima del promedio
 -- Para cada cliente, calcular el total gastado y compararlo con el promedio
 --  de gasto de todos los clientes. Mostrar solamente los clientes cuyo gasto total esté por encima del promedio.
 
+WITH gastos_clientes AS (
+SELECT c.customer_unique_id, SUM(op.payment_value) AS suma_cliente
+FROM customers c
+JOIN orders o
+ON c.customer_id = o.customer_id
+JOIN order_payments op
+ON o.order_id = op.order_id
+GROUP BY c.customer_unique_id
+),
+promedio AS (
+SELECT customer_unique_id, suma_cliente, AVG(suma_cliente) OVER () AS promedio_clientes
+FROM gastos_clientes)
+SELECT *
+FROM promedio
+WHERE suma_cliente > promedio_clientes;
 
+;
 
 
 -- ----------------------------------------------------------------
@@ -704,34 +787,220 @@ FROM ventas_mensuales
 -- Para cada cliente, mostrar sus pedidos, el valor de cada pedido y el promedio de sus pedidos. 
 -- Indicar si el pedido estuvo por encima o por debajo del promedio del cliente.
 
+WITH pedidos_clientes AS (
+    SELECT c.customer_unique_id, o.order_id, op.payment_value, 
+    ROUND(AVG (payment_value) OVER (
+        PARTITION BY c.customer_unique_id
+    ),2) AS promedio_cliente
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+    JOIN order_payments op
+    ON o.order_id = op.order_id
+)
+SELECT customer_unique_id, order_id, payment_value, promedio_cliente,
+CASE
+    WHEN payment_value < promedio_cliente THEN 'Por debajo'
+    WHEN payment_value > promedio_cliente THEN 'Por encima'
+    ELSE 'Igual'
+END AS comparacion
+
+FROM pedidos_clientes;
 
 
 -- ----------------------------------------------------------------
 -- 36. Para cada cliente, mostrar su pedido más reciente.
 
+WITH ranking_compras AS (
+    SELECT c.customer_unique_id, o.order_purchase_timestamp, o.order_id,
+    ROW_NUMBER () OVER (
+        PARTITION BY c.customer_unique_id
+        ORDER BY o.order_purchase_timestamp DESC
+    ) AS ranking
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id  = o.customer_id
+)
+SELECT customer_unique_id, order_purchase_timestamp, order_id
+FROM ranking_compras
+WHERE ranking = 1;
+
 -- ----------------------------------------------------------------
 -- 37. Para cada cliente, mostrar su segundo pedido.
+WITH ranking_compras_2 AS(
+    SELECT c.customer_unique_id, o.order_id, o.order_purchase_timestamp,
+    ROW_NUMBER() OVER (
+        PARTITION BY c.customer_unique_id
+        ORDER BY o.order_purchase_timestamp
+    ) AS ranking_compras
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+)
+SELECT *
+FROM ranking_compras_2
+WHERE ranking_compras = 2;
+
 
 -- ----------------------------------------------------------------
 -- 38. Para cada cliente, mostrar la diferencia de días entre cada compra y la anterior.
+WITH tabla_fechas AS(
+    SELECT c.customer_unique_id, o.order_purchase_timestamp AS fecha_actual, o.order_id,
+    LAG (o.order_purchase_timestamp) OVER (
+        PARTITION BY c.customer_unique_id
+        ORDER BY o.order_purchase_timestamp
+    ) AS fecha_anterior
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+)
+SELECT customer_unique_id, fecha_actual, fecha_anterior,
+fecha_actual::date - fecha_anterior::date AS diferencia_dias
+FROM tabla_fechas
+WHERE fecha_anterior IS NOT NULL;
 
 -- ----------------------------------------------------------------
 -- 39. Para cada estado, mostrar el vendedor que ocupa el segundo puesto en ventas.
 
+WITH ventas_clientes_estado AS (
+    SELECT s.seller_state, s.seller_id, SUM(op.payment_value) AS ventas,
+    ROW_NUMBER () OVER (
+    PARTITION BY s.seller_state
+    ORDER BY SUM(op.payment_value) DESC
+) AS ranking_vendedores
+    FROM sellers s
+    JOIN order_items oi
+    ON s.seller_id = oi.seller_id
+    JOIN order_payments op
+    ON oi.order_id = op.order_id
+    GROUP BY s.seller_state, s.seller_id
+)
+SELECT seller_state, seller_id, ventas, ranking_vendedores
+FROM ventas_clientes_estado
+WHERE ranking_vendedores = 2;
+
+
 -- ----------------------------------------------------------------
 -- 40. Para cada estado, mostrar los vendedores que están dentro de los tres primeros puestos, permitiendo empates.
+WITH ranking_vendedores AS (
+    SELECT s.seller_id, s.seller_state, SUM(op.payment_value) AS suma_vendedor,
+    RANK () OVER (
+        PARTITION BY  S.seller_state
+        ORDER BY SUM(op.payment_value) DESC
+    ) AS ranking_vendedores
+    FROM sellers s
+
+    JOIN order_items oi
+    ON s.seller_id = oi.seller_id
+    JOIN order_payments op
+    ON oi.order_id = op.order_id
+    GROUP BY s.seller_id, s.seller_state
+    -- ORDER BY s.seller_state
+)
+SELECT 
+seller_id, seller_state, suma_vendedor, ranking_vendedores
+FROM ranking_vendedores
+WHERE ranking_vendedores <= 3
+
+
+
 
 -- ----------------------------------------------------------------
 -- 41. Para cada cliente, mostrar cuánto lleva gastado acumulado después de cada pedido.
 
+SELECT c.customer_unique_id,o.order_purchase_timestamp AS fecha, op.payment_value AS pedido_actual, 
+SUM (op.payment_value) OVER (
+    PARTITION BY c.customer_unique_id
+    ORDER BY o.order_purchase_timestamp, o.order_id
+) AS acumulado_cliente
+FROM customers c
+JOIN orders o
+ON c.customer_id = o.customer_id
+
+JOIN order_payments op
+ON o.order_id   = op.order_id
+ORDER BY c.customer_unique_id;
+
+
 -- ----------------------------------------------------------------
 -- 42. Para cada mes, indicar si las ventas aumentaron o disminuyeron respecto al mes anterior.
+WITH ventas_mensuales AS (
+    SELECT DATE_TRUNC('month', o.order_purchase_timestamp) AS mes, SUM(op.payment_value) AS ventas_mensuales,
+    LAG (SUM(op.payment_value)) OVER (
+        -- PARTITION BY DATE_TRUNC('month', o.order_purchase_timestamp)
+        ORDER BY DATE_TRUNC('month', o.order_purchase_timestamp)
+    ) AS venta_mensual_anterior
+    FROM orders o
+    JOIN order_payments op
+    ON o.order_id = op.order_id
+    GROUP BY DATE_TRUNC('month', o.order_purchase_timestamp)
+)
+SELECT mes, ventas_mensuales, venta_mensual_anterior,
+CASE 
+WHEN ventas_mensuales < venta_mensual_anterior THEN 'aumento'
+WHEN ventas_mensuales > venta_mensual_anterior THEN 'disminucion'
+ELSE 'igual'
+END AS comparativa
+FROM ventas_mensuales
+WHERE venta_mensual_anterior IS NOT NULL;
 
 -- ----------------------------------------------------------------
 -- 43. Para cada cliente, mostrar su compra y el promedio de sus compras.
+SELECT c.customer_unique_id, o.order_id, op.payment_value, 
+ROUND(AVG(op.payment_value) OVER (
+    PARTITION BY c.customer_unique_id
+),2) AS promedio_cliente
+FROM customers c
+JOIN orders o
+ON c.customer_id = o.customer_id
+
+JOIN order_payments op
+ON o.order_id = op.order_id
 
 -- ----------------------------------------------------------------
 -- 44. Para cada mes, mostrar qué porcentaje de las ventas acumuladas representa sobre el total del período.
+WITH ventas_mensuales  AS (
+    SELECT DATE_TRUNC('month', o.order_purchase_timestamp) AS mes, SUM(op.payment_value) AS ventas_mes
+    FROM orders o
+    JOIN order_payments op
+    ON o.order_id = op.order_id
+    GROUP BY DATE_TRUNC('month', o.order_purchase_timestamp)
+),
+ventas_acumuladas AS (
+    SELECT mes, 
+    ventas_mes,
+    SUM (ventas_mes) OVER (
+       ORDER BY mes
+    ) AS acumulado
+    FROM ventas_mensuales
+)
+SELECT 
+    mes, ventas_mes, acumulado,
+    ROUND( acumulado / SUM(ventas_mes) OVER () * 100,  2
+    ) AS porcentaje
+FROM ventas_acumuladas
+ORDER BY mes;
 
 -- ----------------------------------------------------------------
 -- 45. Para cada cliente, encontrar el pedido inmediatamente anterior al pedido más reciente.
+WITH pedidos AS (
+    SELECT 
+        c.customer_unique_id,
+        o.order_id,
+        o.order_purchase_timestamp,
+        ROW_NUMBER() OVER (
+            PARTITION BY c.customer_unique_id
+            ORDER BY o.order_purchase_timestamp DESC
+        ) AS ranking
+    FROM customers c
+    JOIN orders o
+        ON c.customer_id = o.customer_id
+)
+
+SELECT 
+    customer_unique_id,
+    order_id,
+    order_purchase_timestamp
+FROM pedidos
+WHERE ranking = 2;
+
