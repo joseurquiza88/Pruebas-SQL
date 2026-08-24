@@ -280,7 +280,6 @@ FROM ventas_por_pedido;
 
 
 
-
 -- ----------------------------------------------------------------
 -- 15. Mostrar cada venta junto con el promedio de ventas del cliente.
 -- No importa el orden pero tengo un grupo
@@ -300,7 +299,36 @@ ON o.order_id = oi.order_id
 -- 16. Para cada cliente, mostrar cada una de sus ventas junto con el promedio de esa venta y las 2 ventas anteriores,
  -- ordenadas por fecha.
 
+WITH ventas AS (
+    SELECT c.customer_unique_id, o.order_purchase_timestamp AS fecha, op.payment_value AS venta_cliente,
+    LAG(op.payment_value,1) OVER (
+        PARTITION BY c.customer_unique_id
+        ORDER BY o.order_purchase_timestamp
+    ) AS venta_anterior,
 
+    LAG(op.payment_value,2) OVER (
+        PARTITION BY c.customer_unique_id
+        ORDER BY o.order_purchase_timestamp
+    ) AS venta_anterior_anterior
+
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+    JOIN order_payments op
+    ON o.order_id = op.order_id
+)
+SELECT customer_unique_id, fecha, venta_cliente, 
+-- ROUND((venta_cliente + NULLIF(venta_anterior,0) + NULLIF(venta_anterior_anterior,0))/3,2) AS promedio_ventas_anteriores
+ROUND(
+    (venta_cliente + COALESCE(venta_anterior, 0) + COALESCE(venta_anterior_anterior, 0)) /
+    (
+        1
+        + CASE WHEN venta_anterior IS NOT NULL THEN 1 ELSE 0 END
+        + CASE WHEN venta_anterior_anterior IS NOT NULL THEN 1 ELSE 0 END
+    ),    2
+) AS promedio_ventas
+FROM ventas
+ORDER BY fecha
 
 
 -- ----------------------------------------------------------------
@@ -329,37 +357,146 @@ GROUP BY d.mes, pg.promedio_general;
 
 
 -- ----------------------------------------------------------------
--- 18. Ventas mensuales: Obtener las ventas totales de cada mes.
+-- 18. Ventas mensuales: Obtener para cada mes el total de ventas, la cantidad de pedidos realizados
+-- y la variación porcentual de las ventas respecto al mes anterior.
+WITH ventas_mensuales AS (
+    SELECT DATE_TRUNC ('month',o.order_purchase_timestamp) AS mes, 
+    SUM(op.payment_value) AS ventas_mensual_actual,
+    COUNT(DISTINCT o.order_id) AS cantidad_pedidos,
+    LAG (SUM(op.payment_value)) OVER (
+        -- PARTITION BY DATE_TRUNC ('month',o.order_purchase_timestamp). Esto no lo hagoporque ya se hace el group by despues
+        ORDER BY DATE_TRUNC ('month',o.order_purchase_timestamp)
+    ) AS venta_mensual_anterior
+    FROM orders o
+    JOIN order_payments op
+    ON o.order_id = op.order_id
+    GROUP BY DATE_TRUNC ('month',o.order_purchase_timestamp)
+    ORDER BY mes
+)
+SELECT mes,cantidad_pedidos, ventas_mensual_actual,
+ ROUND(((ventas_mensual_actual-venta_mensual_anterior)/NULLIF(venta_mensual_anterior,0))*100,2) AS variacion
+FROM ventas_mensuales
+
+
 
 
 
 -- ----------------------------------------------------------------
--- 19. Ventas mensuales + mes anterior
-
+-- 19. Evolución mensual de las ventas: Para cada mes, mostrar el total de ventas, 
+-- el total de ventas del mes anterior y la variación absoluta y porcentual respecto al mes anterior. 
+-- Ordenar los resultados
+WITH ventas_mensual AS (
+    SELECT DATE_TRUNC ('month', order_purchase_timestamp) AS mes,
+    SUM(op.payment_value) AS ventas_actual,
+    LAG (SUM(op.payment_value)) OVER (
+        ORDER BY DATE_TRUNC ('month', order_purchase_timestamp)
+    ) AS ventas_mes_anterior
+    FROM orders o
+    JOIN order_payments op
+    ON o.order_id = op.order_id
+    GROUP BY DATE_TRUNC ('month', order_purchase_timestamp)
+)
+-- variación absoluta y porcentual respecto al mes anterior.
+SELECT mes, ventas_actual, ventas_mes_anterior,
+( ventas_actual -  ventas_mes_anterior)AS variacion_absoluta,
+ROUND(((ventas_actual-ventas_mes_anterior)/NULLIF(ventas_mes_anterior,0))*100,2) AS variacion_porcentual
+FROM ventas_mensual
+ORDER BY mes
 
 
 -- ----------------------------------------------------------------
--- 20. Calcular las ventas mensuales y el crecimiento porcentual respecto al mes anterior.
-
-
-
-
+-- 20. Ranking mensual de clientes: Para cada mes, obtener los 5 clientes con mayor monto total de compras.
+-- Mostrar el mes, el cliente, el total comprado y su posición dentro del ranking mensual.
+WITH ventas_total_mes_clientes AS (
+    SELECT DATE_TRUNC('month', o.order_purchase_timestamp) AS mes,
+    c.customer_unique_id AS cliente,
+    SUM (op.payment_value) AS total_compras
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+    JOIN order_payments op
+    ON o.order_id = op.order_id
+    GROUP BY DATE_TRUNC('month', o.order_purchase_timestamp), c.customer_unique_id
+),
+ranking_clientes AS (
+SELECT mes, cliente, total_compras,
+RANK () OVER (
+    PARTITION BY mes
+    ORDER BY total_compras DESC
+) AS ranking
+FROM ventas_total_mes_clientes
+)
+SELECT mes, cliente, total_compras, ranking
+FROM ranking_clientes
+WHERE ranking <= 5
+ORDER BY mes, ranking;
 
 
 -- ----------------------------------------------------------------
 -- 21. Obtener los 3 pedidos más recientes de cada cliente.
-
-
+WITH pedidos_clientes AS (
+    SELECT c.customer_unique_id, o.order_id, o.order_purchase_timestamp AS fecha,
+    RANK () OVER (
+        PARTITION BY c.customer_unique_id
+        ORDER BY o.order_purchase_timestamp DESC
+    ) AS ranking
+    FROM orders o
+    JOIN customers c
+    ON o.customer_id = c.customer_id
+    -- ORDER BY c.customer_unique_id, ranking;
+)
+SELECT customer_unique_id, order_id, fecha, ranking
+FROM pedidos_clientes
+WHERE ranking <= 3
+ORDER BY customer_unique_id, ranking;
 
 
 
 -- ----------------------------------------------------------------
 -- 22. Obtener el top 3 de vendedores por estado, permitiendo empates
+WITH vendedores_por_estado AS (
+    SELECT s.seller_id, s.seller_state, SUM(op.payment_value) as total_ventas,
+    RANK () OVER (
+        PARTITION BY s.seller_state
+        ORDER BY SUM(op.payment_value) DESC
+    ) AS ranking_vendedores
+    FROM sellers s
+    JOIN order_items oi
+    ON s.seller_id = oi.seller_id
 
-
+    JOIN order_payments op
+    ON oi.order_id = op.order_id
+     GROUP BY s.seller_id, s.seller_state
+    -- ORDER BY  s.seller_state, ranking_vendedores;
+)
+SELECT seller_id, seller_state, total_ventas, ranking_vendedores
+FROM vendedores_por_estado
+WHERE ranking_vendedores <= 3
+ORDER BY seller_state, ranking_vendedores;
 
 -- ----------------------------------------------------------------
 -- 23. Calcular las ventas mensuales, las ventas del mes anterior, la variación porcentual y las ventas acumuladas.
+WITH ventas AS (
+    SELECT DATE_TRUNC('month', o.order_purchase_timestamp) AS fecha, SUM(op.payment_value) AS total_venta_actual,
+    LAG (SUM(op.payment_value)) OVER (
+        -- esto no va porque se hace un group by despues, ya esta agrupad, y no queremos hacer un cálculo independiente para cada mes.
+        -- PARTITION BY DATE_TRUNC('month', o.order_purchase_timestamp), 
+        
+        ORDER BY DATE_TRUNC('month', o.order_purchase_timestamp)  
+    ) AS total_venta_anterior
+    FROM orders o
+    JOIN order_payments op
+    ON o.order_id = op.order_id
+    GROUP BY DATE_TRUNC('month', o.order_purchase_timestamp)
+    ORDER BY fecha
+) 
+SELECT fecha, total_venta_actual, total_venta_anterior,
+-- variación porcentual 
+ROUND(((total_venta_actual -  total_venta_anterior) / NULLIF(total_venta_anterior,0))*100,2) AS variacion_porcentual,
+-- ventas acumuladas
+SUM(total_venta_actual) OVER (
+    ORDER BY fecha) AS ventas_acumuladas
+FROM ventas
 
 
 
