@@ -501,11 +501,18 @@ FROM ventas
 
 
 -- ----------------------------------------------------------------
--- 24. Primera compra de cada cliente
--- Para cada cliente, mostrar todos sus pedidos junto con el número de pedido que representa dentro de su historial de compras. 
+-- 24. Para cada cliente, mostrar todos sus pedidos junto con el número de pedido que representa dentro de su historial de compras. 
 -- Ordenarlos cronológicamente.
 
-
+SELECT c.customer_unique_id, o.order_id, o.order_purchase_timestamp,
+ROW_NUMBER() OVER (
+    PARTITION BY c.customer_unique_id
+    ORDER BY o.order_purchase_timestamp
+) AS numero_pedido
+FROM orders o
+JOIN customers c
+ON o.customer_id = c.customer_id
+ORDER BY c.customer_unique_id, o.order_purchase_timestamp
 
 
 -- ----------------------------------------------------------------
@@ -513,20 +520,63 @@ FROM ventas
 -- Obtener únicamente aquellos clientes que realizaron al menos dos pedidos y mostrar su segundo pedido, 
 -- junto con la fecha en que lo realizaron.
 
+WITH pedidos AS (
+    SELECT c.customer_unique_id, o.order_id, o.order_purchase_timestamp,
+    ROW_NUMBER () OVER (
+        PARTITION BY c.customer_unique_id
+        ORDER BY o.order_purchase_timestamp
+    ) AS numero_pedido
 
+    FROM orders o
+    JOIN customers c
+    ON o.customer_id = c.customer_id
+)
+SELECT *
+FROM pedidos
+WHERE numero_pedido = 2
 
 
 -- ----------------------------------------------------------------
 -- 26. Vendedores con la misma posición
 -- Para cada estado, obtener los vendedores ordenados según sus ventas totales. 
--- Mostrar todos los vendedores y su posición dentro del estado. Los vendedores con la misma cantidad de ventas deben 
+-- Mostrar todos los vendedores y su posición dentro del estado. Los vendedores con el mismo monto de ventas deben 
 -- compartir posición.
 
+SELECT s.seller_state, s.seller_id,  SUM(op.payment_value) as ventas_vendedor,
+RANK () OVER (
+    PARTITION BY s.seller_state
+    ORDER BY SUM(op.payment_value) DESC
+) as ranking_monto_ventas
+FROM sellers s
+JOIN order_items oi
+ON s.seller_id = oi.seller_id
+JOIN order_payments op
+ON oi.order_id = op.order_id 
+GROUP BY s.seller_id, s.seller_state
+ORDER BY ventas_vendedor, s.seller_state;
 
 -- ----------------------------------------------------------------
 -- 27. Top 3 vendedores, exactamente 3 por estado
 -- Para cada estado, obtener exactamente los 3 vendedores con mayores ventas. 
 -- En caso de empate, igualmente deben aparecer exactamente 3 vendedores.
+
+WITH ranking_vendedores AS (
+    SELECT s.seller_state, s.seller_id, SUM(op.payment_value) AS total_ventas_cliente,
+    ROW_NUMBER () OVER (
+        PARTITION BY s.seller_state
+        ORDER BY SUM(op.payment_value) DESC
+    ) AS ranking
+    FROM sellers s
+    JOIN order_items oi
+    ON s.seller_id = oi.seller_id
+    JOIN order_payments op
+    ON oi.order_id = op.order_id
+    GROUP BY s.seller_id, s.seller_state
+    -- ORDER BY s.seller_state, ranking
+)
+SELECT *
+FROM ranking_vendedores
+WHERE ranking <=3;
 
 
 
@@ -534,6 +584,22 @@ FROM ventas
 -- 28. Diferencia entre pedidos
 -- Para cada cliente, mostrar cada pedido junto con la cantidad de días transcurridos desde su pedido anterior.
 
+WITH fechas_pedidos AS (
+    SELECT c.customer_unique_id, o.order_id, o.order_purchase_timestamp AS fecha_actual,
+    LAG (o.order_purchase_timestamp) OVER (
+        PARTITION BY c.customer_unique_id
+        ORDER BY  o.order_purchase_timestamp
+    ) AS fecha_anterior
+    FROM customers c
+
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+)
+SELECT customer_unique_id, order_id, fecha_actual,fecha_anterior,
+fecha_actual::date - fecha_anterior::date AS diferencia_dias
+FROM fechas_pedidos
+WHERE fecha_anterior IS NOT NULL
+ORDER BY diferencia_dias DESC;
 
 
 
@@ -541,7 +607,23 @@ FROM ventas
 -- 29. Tiempo hasta la próxima compra
 -- Para cada cliente, mostrar cada pedido junto con la cantidad de días que faltaron hasta su siguiente pedido. 
 -- Excluir el último pedido de cada cliente.
+WITH fecha_pedidos AS (
+    SELECT c.customer_unique_id, o.order_id, o.order_purchase_timestamp AS fecha_pedido_actual,
+    LEAD (o.order_purchase_timestamp) OVER (
+        PARTITION BY c.customer_unique_id
+        ORDER BY o.order_purchase_timestamp
+    ) AS fecha_pedido_siguiente
+    FROM customers c
 
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+)
+SELECT customer_unique_id, order_id,  fecha_pedido_actual,
+
+fecha_pedido_siguiente::date - fecha_pedido_actual::date AS diferencia_dias
+FROM fechas_pedidos
+WHERE fecha_pedido_siguiente IS NOT NULL
+ORDER BY diferencia_dias DESC;
 
 
 
@@ -550,16 +632,50 @@ FROM ventas
 -- Para cada cliente, mostrar cada compra, la compra anterior y una columna que indique
 -- si la compra actual fue mayor, menor o igual que la anterior.
 
-
-
+WITH compras AS (
+    SELECT c.customer_unique_id, o.order_id, o.order_purchase_timestamp AS fecha, op.payment_value compra_actual,
+    LAG (op.payment_value) OVER (
+        PARTITION BY c.customer_unique_id
+        ORDER BY o.order_purchase_timestamp
+    ) AS compra_anterior
+    FROM customers c
+    JOIN orders o
+    ON c.customer_id = o.customer_id
+    JOIN order_payments op
+    ON o.order_id = op.order_id
+)
+SELECT customer_unique_id, fecha, compra_actual, compra_anterior,
+CASE
+    WHEN compra_anterior IS NULL THEN 'Primera compra'
+    WHEN compra_actual > compra_anterior THEN 'Mayor'
+    WHEN compra_actual < compra_anterior THEN 'Menor'
+    WHEN compra_actual = compra_anterior THEN 'Igual'
+END AS comparacion
+FROM compras
 
 -- ----------------------------------------------------------------
 -- 31. Porcentaje acumulado de ventas
 -- Ordenar las ventas mensuales cronológicamente y mostrar para cada mes el total vendido 
 -- y qué porcentaje representan las ventas acumuladas hasta ese momento respecto del total de ventas del período.
 
+-- ESTA MAL!!! REVISAR!!
 
+WITH ventas_mensuales AS (
+SELECT DATE_TRUNC('month', o.order_purchase_timestamp) AS mes, SUM(op.payment_value) AS total_mensual,
+SUM (op.payment_value) OVER (
+    ORDER BY DATE_TRUNC('month', o.order_purchase_timestamp)
+) AS total_acumulado
+FROM orders o
+JOIN order_payments op
+ON o.order_id = op.order_id
 
+GROUP BY DATE_TRUNC('month', o.order_purchase_timestamp)
+-- ORDER BY DATE_TRUNC('month', o.order_purchase_timestamp)
+)
+
+SELECT order_id, mes, total_mensual, total_acumulado, 
+((total_acumulado / total_mensual )* 100)  AS porcentaje_venta_total
+FROM ventas_mensuales
 -- ----------------------------------------------------------------
 -- 32. Porcentaje acumulado dentro de cada cliente
 -- Para cada cliente, mostrar sus pedidos ordenados cronológicamente,
