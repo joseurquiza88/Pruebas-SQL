@@ -305,10 +305,74 @@ ORDER BY mes;
 
 -- ----------------------------------------------------------------
 -- 24. Clientes recurrentes por mes. Para cada mes, calcular cuántos clientes que ya habían comprado anteriormente volvieron a comprar.
+WITH compras AS (
+    SELECT DATE_TRUNC ('month', o.order_purchase_timestamp) AS mes, c.customer_unique_id
+    FROM customers c
+    JOIN orders o
+        ON c.customer_id = o.customer_id
+    GROUP BY DATE_TRUNC ('month', o.order_purchase_timestamp), c.customer_unique_id
+),
+clientes_recurrentes AS (
+    SELECT mes, customer_unique_id, 
+    MIN(mes) OVER (
+
+        PARTITION BY customer_unique_id
+
+    ) AS primer_mes
+    FROM compras
+)
+SELECT
+    mes,
+    COUNT(customer_unique_id) AS cantidad_clientes
+FROM clientes_recurrentes
+WHERE mes > primer_mes
+GROUP BY mes
+ORDER BY mes;
 
 
 -- ----------------------------------------------------------------
 -- 25. Tasa de clientes recurrentes. Para cada mes, calcular el porcentaje de clientes que realizaron una compra y que ya habían comprado anteriormente.
+WITH compras_clientes AS (
+    SELECT DATE_TRUNC('month', o.order_purchase_timestamp) AS mes, c.customer_unique_id--,
+
+    FROM customers c
+    JOIN orders o
+        ON c.customer_id = o.customer_id
+    GROUP BY DATE_TRUNC('month', o.order_purchase_timestamp), c.customer_unique_id
+    ORDER BY mes
+) ,
+primera_compra AS (
+    SELECT mes, customer_unique_id,
+    MIN (mes ) OVER (
+        PARTITION BY customer_unique_id
+    ) AS primer_mes
+
+    FROM compras_clientes
+    ORDER BY mes
+),
+total_clientes AS (
+    SELECT 
+        mes,
+        COUNT(customer_unique_id) AS cantidad_clientes_total
+    FROM compras_clientes
+    GROUP BY mes
+),
+clientes_recurrentes AS (
+    SELECT
+        mes,
+        COUNT(customer_unique_id) AS cantidad_clientes_recurrentes
+    FROM primera_compra
+    WHERE mes > primer_mes
+    GROUP BY mes
+)
+SELECT t.mes, t.cantidad_clientes_total,
+    COALESCE(r.cantidad_clientes_recurrentes, 0) AS cantidad_clientes_recurrentes,
+    ROUND(100.0 * COALESCE(r.cantidad_clientes_recurrentes, 0) 
+        / t.cantidad_clientes_total,2) AS porcentaje_recurrentes
+FROM total_clientes t
+LEFT JOIN clientes_recurrentes r
+    ON t.mes = r.mes
+ORDER BY t.mes;
 
 -- ----------------------------------------------------------------
 -- 26. Obtener los 10 productos con mayor cantidad de unidades vendidas.
